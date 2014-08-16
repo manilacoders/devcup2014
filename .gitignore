@@ -1,4 +1,4 @@
-config/database.yml
+config/databases.yml
 cache/*
 log/*
 web/uploads/*
