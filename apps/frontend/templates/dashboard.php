@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Guró | Online Teacher-Student Monitoring</title>
+    <title>Guró | Dashboard</title>
 
     <!-- Bootstrap CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
   </head>
   <body>
     <div id="header">
-      <?php echo include_partial('global/layout_header', array( 'current_section' => get_slot('current_section', null))) ?>
+      <?php echo include_partial('global/dashboard_header', array( 'current_section' => get_slot('current_section', null))) ?>
     </div>
 
     <div class="container-fluid">
@@ -29,12 +29,14 @@
     </div>
 
     <div id="footer">
-      <?php echo include_partial('global/layout_footer') ?>
+      <?php echo include_partial('global/dashboard_footer') ?>
     </div>
 
     <!-- jQuery -->
     <script src="/js/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    <?php include_slot('page_js') ?>
   </body>
 </html>
