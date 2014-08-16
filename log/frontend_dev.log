@@ -1,0 +1,77 @@
+Aug 16 16:19:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 16:19:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:19:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:19:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 16:19:14 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:19:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:19:14 symfony [info] {main} Get slot "current_section"
+Aug 16 16:19:14 symfony [info] {sfPartialView} Render "/var/www/devcup2014/apps/frontend/templates/_header.php"
+Aug 16 16:19:14 symfony [info] {sfPartialView} Render "/var/www/devcup2014/apps/frontend/templates/_footer.php"
+Aug 16 16:19:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:19:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:19:14 symfony [info] {sfWebResponse} Send content (5588 o)
+Aug 16 16:19:35 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 16:19:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:19:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:19:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:19:37 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO profiles (email, type, is_active, email_token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (daison12006013@gmail.com, teacher, 0, a08c24beb0bbc1d505e5ed1e77400295, 2014-08-16 16:19:37, 2014-08-16 16:19:37)
+Aug 16 16:19:37 symfony [info] {sfPartialView} Render "/var/www/devcup2014/apps/frontend/modules/emails/templates/_confirmation.php"
+Aug 16 16:19:46 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "GURO Account Confirmation" to "daison12006013@gmail.com"
+Aug 16 16:19:50 symfony [info] {sfFrontWebController} Redirect to "http://devcup.daison.dev:6900/frontend_dev.php/forConfirmation"
+Aug 16 16:19:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Aug 16 16:19:50 symfony [info] {sfWebResponse} Send header "Location: http://devcup.daison.dev:6900/frontend_dev.php/forConfirmation"
+Aug 16 16:19:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:19:50 symfony [info] {sfWebResponse} Send content (133 o)
+Aug 16 16:19:53 symfony [info] {sfPatternRouting} Match route "forConfirmation" (/forConfirmation) for /forConfirmation with parameters array (  'module' => 'profiles',  'action' => 'forConfirmation',)
+Aug 16 16:19:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:19:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:19:53 symfony [info] {profilesActions} Call "profilesActions->executeForConfirmation()"
+Aug 16 16:19:54 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/forConfirmationSuccess.php"
+Aug 16 16:19:54 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:19:54 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:19:54 symfony [info] {main} Get slot "current_section"
+Aug 16 16:19:54 symfony [info] {sfPartialView} Render "/var/www/devcup2014/apps/frontend/templates/_header.php"
+Aug 16 16:19:54 symfony [info] {sfPartialView} Render "/var/www/devcup2014/apps/frontend/templates/_footer.php"
+Aug 16 16:19:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:19:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:19:54 symfony [info] {sfWebResponse} Send content (5342 o)
+Aug 16 16:32:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 16:32:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:32:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:32:07 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 16:32:07 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:32:07 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:32:07 symfony [info] {main} Get slot "current_section"
+Aug 16 16:32:07 symfony [info] {sfPartialView} Render "/var/www/devcup2014/apps/frontend/templates/_header.php"
+Aug 16 16:32:07 symfony [info] {sfPartialView} Render "/var/www/devcup2014/apps/frontend/templates/_footer.php"
+Aug 16 16:32:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:32:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:32:07 symfony [info] {sfWebResponse} Send content (5588 o)
+Aug 16 16:32:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempReports/index with parameters array (  'module' => 'tempReports',  'action' => 'index',)
+Aug 16 16:32:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:32:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:32:18 symfony [info] {tempReportsActions} Call "tempReportsActions->executeIndex()"
+Aug 16 16:32:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:32:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.type AS p__type, p.first_name AS p__first_name, p.middle_name AS p__middle_name, p.last_name AS p__last_name, p.email AS p__email, p.password AS p__password, p.section_id AS p__section_id, p.is_active AS p__is_active, p.email_token AS p__email_token, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM profiles p WHERE (p.id = ?) LIMIT 1 - (1)
+Aug 16 16:32:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempReports/index with parameters array (  'module' => 'tempReports',  'action' => 'index',)
+Aug 16 16:32:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:32:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:32:42 symfony [info] {tempReportsActions} Call "tempReportsActions->executeIndex()"
+Aug 16 16:32:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:32:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.type AS p__type, p.first_name AS p__first_name, p.middle_name AS p__middle_name, p.last_name AS p__last_name, p.email AS p__email, p.password AS p__password, p.section_id AS p__section_id, p.is_active AS p__is_active, p.email_token AS p__email_token, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM profiles p WHERE (p.id = ?) LIMIT 1 - (1)
+Aug 16 16:33:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempReports/index with parameters array (  'module' => 'tempReports',  'action' => 'index',)
+Aug 16 16:33:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:33:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:33:21 symfony [info] {tempReportsActions} Call "tempReportsActions->executeIndex()"
+Aug 16 16:33:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:33:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.type AS p__type, p.first_name AS p__first_name, p.middle_name AS p__middle_name, p.last_name AS p__last_name, p.email AS p__email, p.password AS p__password, p.section_id AS p__section_id, p.is_active AS p__is_active, p.email_token AS p__email_token, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM profiles p WHERE (p.id = ?) LIMIT 1 - (1)
+Aug 16 16:33:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.profile_id IN (?)) - (1)
+Aug 16 16:34:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempReports/index with parameters array (  'module' => 'tempReports',  'action' => 'index',)
+Aug 16 16:34:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:34:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:34:06 symfony [info] {tempReportsActions} Call "tempReportsActions->executeIndex()"
+Aug 16 16:34:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:34:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.type AS p__type, p.first_name AS p__first_name, p.middle_name AS p__middle_name, p.last_name AS p__last_name, p.email AS p__email, p.password AS p__password, p.section_id AS p__section_id, p.is_active AS p__is_active, p.email_token AS p__email_token, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM profiles p WHERE (p.id = ?) LIMIT 1 - (1)
+Aug 16 16:34:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.profile_id IN (?)) - (1)
+Aug 16 16:34:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id IN (?)) - (1)
+Aug 16 16:34:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id IN (?)) - (2)
