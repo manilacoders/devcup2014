@@ -1,3 +1,7 @@
-log/
-cache/
 config/database.yml
+cache/*
+log/*
+web/uploads/*
+data/sql/*
+VERSION
+.DS_Store
