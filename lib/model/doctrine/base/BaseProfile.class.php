@@ -15,27 +15,30 @@
  * @property boolean $is_active
  * @property varchar $email_token
  * @property Section $section
+ * @property Doctrine_Collection $exams
  * 
- * @method varchar getType()        Returns the current record's "type" value
- * @method varchar getFirstName()   Returns the current record's "first_name" value
- * @method varchar getMiddleName()  Returns the current record's "middle_name" value
- * @method varchar getLastName()    Returns the current record's "last_name" value
- * @method varchar getEmail()       Returns the current record's "email" value
- * @method varchar getPassword()    Returns the current record's "password" value
- * @method integer getSectionId()   Returns the current record's "section_id" value
- * @method boolean getIsActive()    Returns the current record's "is_active" value
- * @method varchar getEmailToken()  Returns the current record's "email_token" value
- * @method Section getSection()     Returns the current record's "section" value
- * @method Profile setType()        Sets the current record's "type" value
- * @method Profile setFirstName()   Sets the current record's "first_name" value
- * @method Profile setMiddleName()  Sets the current record's "middle_name" value
- * @method Profile setLastName()    Sets the current record's "last_name" value
- * @method Profile setEmail()       Sets the current record's "email" value
- * @method Profile setPassword()    Sets the current record's "password" value
- * @method Profile setSectionId()   Sets the current record's "section_id" value
- * @method Profile setIsActive()    Sets the current record's "is_active" value
- * @method Profile setEmailToken()  Sets the current record's "email_token" value
- * @method Profile setSection()     Sets the current record's "section" value
+ * @method varchar             getType()        Returns the current record's "type" value
+ * @method varchar             getFirstName()   Returns the current record's "first_name" value
+ * @method varchar             getMiddleName()  Returns the current record's "middle_name" value
+ * @method varchar             getLastName()    Returns the current record's "last_name" value
+ * @method varchar             getEmail()       Returns the current record's "email" value
+ * @method varchar             getPassword()    Returns the current record's "password" value
+ * @method integer             getSectionId()   Returns the current record's "section_id" value
+ * @method boolean             getIsActive()    Returns the current record's "is_active" value
+ * @method varchar             getEmailToken()  Returns the current record's "email_token" value
+ * @method Section             getSection()     Returns the current record's "section" value
+ * @method Doctrine_Collection getExams()       Returns the current record's "exams" collection
+ * @method Profile             setType()        Sets the current record's "type" value
+ * @method Profile             setFirstName()   Sets the current record's "first_name" value
+ * @method Profile             setMiddleName()  Sets the current record's "middle_name" value
+ * @method Profile             setLastName()    Sets the current record's "last_name" value
+ * @method Profile             setEmail()       Sets the current record's "email" value
+ * @method Profile             setPassword()    Sets the current record's "password" value
+ * @method Profile             setSectionId()   Sets the current record's "section_id" value
+ * @method Profile             setIsActive()    Sets the current record's "is_active" value
+ * @method Profile             setEmailToken()  Sets the current record's "email_token" value
+ * @method Profile             setSection()     Sets the current record's "section" value
+ * @method Profile             setExams()       Sets the current record's "exams" collection
  * 
  * @package    devcup2014
  * @subpackage model
@@ -133,6 +136,10 @@ abstract class BaseProfile extends sfDoctrineRecord
         $this->hasOne('Section as section', array(
              'local' => 'section_id',
              'foreign' => 'id'));
+
+        $this->hasMany('Exam as exams', array(
+             'local' => 'id',
+             'foreign' => 'profile_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

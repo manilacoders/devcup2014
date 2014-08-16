@@ -7,13 +7,16 @@
  * 
  * @property string $name
  * @property integer $profile_id
+ * @property Profile $profile
  * @property Doctrine_Collection $id
  * 
  * @method string              getName()       Returns the current record's "name" value
  * @method integer             getProfileId()  Returns the current record's "profile_id" value
+ * @method Profile             getProfile()    Returns the current record's "profile" value
  * @method Doctrine_Collection getId()         Returns the current record's "id" collection
  * @method Exam                setName()       Sets the current record's "name" value
  * @method Exam                setProfileId()  Sets the current record's "profile_id" value
+ * @method Exam                setProfile()    Sets the current record's "profile" value
  * @method Exam                setId()         Sets the current record's "id" collection
  * 
  * @package    devcup2014
@@ -38,6 +41,10 @@ abstract class BaseExam extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasOne('Profile as profile', array(
+             'local' => 'profile_id',
+             'foreign' => 'id'));
+
         $this->hasMany('Question as id', array(
              'local' => 'id',
              'foreign' => 'exam_id'));
