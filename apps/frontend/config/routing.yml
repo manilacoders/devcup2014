@@ -1,6 +1,19 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+
+login:
+  url:   login
+  param: { module: profiles, action: login }
+
+register:
+  url:   register
+  param: { module: profiles, action: register }
+
+confirm:
+  url:   confirm/:emailToken
+  param: { module: profiles, action: register }
+
 # default rules
 homepage:
   url:   /
