@@ -1,0 +1,37 @@
+Student:
+  tableName: 'students'
+  columns:
+    first_name: varchar(50)
+    middle_name: varchar(50)
+    last_name: varchar(50)
+    email: varchar(50)
+    password: varchar(50)
+    section_id: integer
+
+    # Pending, Active
+    is_active: boolean
+  indexes:
+    first_name:
+      fields: [first_name]
+    middle_name:
+      fields: [middle_name]
+    last_name:
+      fields: [last_name]
+    email:
+      fields: [email]
+    is_active:
+      fields: [is_active]
+
+  relations:
+    Section:
+      alias: sections
+      refClass: StudentSection
+      foreignAlias: students
+
+  actAs:
+    - Timestampable
+
+StudentSection:
+  columns:
+    student_id: integer
+    section_id: integer
