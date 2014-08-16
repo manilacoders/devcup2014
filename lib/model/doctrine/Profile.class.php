@@ -15,4 +15,32 @@ class Profile extends BaseProfile
   const
     TYPE_TEACHER = 'teacher',
     TYPE_STUDENT = 'student';
+
+  /**
+   * Short Description here.
+   *
+   * @author Kenn Capara
+   * @return void
+   */
+  public function preInsert($event)
+  {
+    $this
+      ->setIsActive(false)
+      ->setEmailToken($this->generateEmailToken())
+      ;
+
+    return $this;
+  }
+
+  /**
+   * Short Description here.
+   *
+   * @author Kenn Capara
+   * @return void
+   */
+  public function generateEmailToken()
+  {
+    $crypt = new RandomGenerator;
+    return $crypt->setToken(sfConfig::get('app_random_token'))->getCrypt();
+  }
 }

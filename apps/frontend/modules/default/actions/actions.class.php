@@ -1,14 +1,14 @@
 <?php
 
 /**
- * profiles actions.
+ * default actions.
  *
  * @package    devcup2014
- * @subpackage profiles
+ * @subpackage default
  * @author     kncapara@gmail.com
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class profilesActions extends sfActions
+class defaultActions extends sfActions
 {
  /**
   * Executes index action
@@ -17,15 +17,5 @@ class profilesActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-  }
-
-  /**
-   * Executes Success action
-   *
-   * @param sfWebRequest  A request object
-   **/
-  public function executeForConfirmation(sfWebRequest $request)
-  {
-    
   }
 }

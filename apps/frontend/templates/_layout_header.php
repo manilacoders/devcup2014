@@ -26,7 +26,7 @@
       <div class="modal-body">
       	<div class="col-md-6">
       		<div class="well">
-	      		<form action="" method="POST" class="form-horizontal" role="form">
+	      		<form action="<?php echo url_for('@login'); ?>" method="POST" class="form-horizontal" role="form">
 	      				<div class="form-group">
 	      					<legend>Log In</legend>
 	      				</div>
@@ -55,7 +55,7 @@
       	</div>
       	<div class="col-md-6">
       		<div class="well">
-	      		<form action="" method="POST" class="form-horizontal" role="form">
+	      		<form action="<?php echo url_for('@register'); ?>" method="POST" class="form-horizontal" role="form">
 	      				<div class="form-group">
 	      					<legend>Register</legend>
 	      				</div>
