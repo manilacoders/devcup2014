@@ -3,6 +3,8 @@
 
 # default values
 all:
+
   random_token: daisonphillipkenn
+
   email:
-    noreply: devcup2014noreply@gmail.com
+    sender: devcup2014noreply@gmail.com

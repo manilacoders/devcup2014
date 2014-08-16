@@ -1,16 +1,33 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+
+login:
+  url:   login
+  param: { module: profiles, action: login }
+
+register:
+  url:   register
+  param: { module: profiles, action: register }
+
+confirm:
+  url:   confirm/:emailToken
+  param: { module: profiles, action: register }
+
+forConfirmation:
+  url:   forConfirmation
+  param: { module: profiles, action: forConfirmation }
+
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: static, action: home }
 
 # generic rules
 # please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
+# default_index:
+#   url:   /:module
+#   param: { action: index }
 
 default:
   url:   /:module/:action/*
