@@ -289,3 +289,71 @@ Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} Action "profiles/register" 133
 Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (2)
 Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 90.85 ms (1)
 Aug 16 13:35:55 symfony [info] {sfWebResponse} Send content (31653 o)
+Aug 16 14:00:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /profiles with parameters array (  'module' => 'profiles',  'action' => 'index',)
+Aug 16 14:00:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:00:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:00:20 symfony [info] {profilesActions} Call "profilesActions->executeIndex()"
+Aug 16 14:00:20 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/indexSuccess.php"
+Aug 16 14:00:20 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:00:20 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:00:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 14:00:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 14:00:20 symfony [info] {sfWebDebugLogger} Configuration 1105.28 ms (9)
+Aug 16 14:00:20 symfony [info] {sfWebDebugLogger} Factories 243.01 ms (1)
+Aug 16 14:00:20 symfony [info] {sfWebDebugLogger} Action "profiles/index" 0.16 ms (1)
+Aug 16 14:00:20 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/index" 97.39 ms (1)
+Aug 16 14:00:20 symfony [info] {sfWebResponse} Send content (26894 o)
+Aug 16 14:01:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /questions/index with parameters array (  'module' => 'questions',  'action' => 'index',)
+Aug 16 14:01:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:01:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:01:03 symfony [info] {questionsActions} Call "questionsActions->executeIndex()"
+Aug 16 14:01:04 symfony [err] {Doctrine_Table_Exception} Unknown relation alias question
+Aug 16 14:01:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Aug 16 14:01:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 14:01:04 symfony [info] {sfWebDebugLogger} Configuration 130.31 ms (9)
+Aug 16 14:01:04 symfony [info] {sfWebDebugLogger} Factories 97.82 ms (1)
+Aug 16 14:01:04 symfony [info] {sfWebDebugLogger} Action "questions/index" 726.06 ms (1)
+Aug 16 14:01:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /questions/index with parameters array (  'module' => 'questions',  'action' => 'index',)
+Aug 16 14:01:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:01:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:01:37 symfony [info] {questionsActions} Call "questionsActions->executeIndex()"
+Aug 16 14:01:37 symfony [err] {Doctrine_Table_Exception} Unknown relation alias question
+Aug 16 14:01:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Aug 16 14:01:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 14:01:38 symfony [info] {sfWebDebugLogger} Configuration 49.00 ms (8)
+Aug 16 14:01:38 symfony [info] {sfWebDebugLogger} Factories 143.98 ms (1)
+Aug 16 14:01:38 symfony [info] {sfWebDebugLogger} Action "questions/index" 554.17 ms (1)
+Aug 16 14:01:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /questions/index with parameters array (  'module' => 'questions',  'action' => 'index',)
+Aug 16 14:01:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:01:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:01:53 symfony [info] {questionsActions} Call "questionsActions->executeIndex()"
+Aug 16 14:01:53 symfony [err] {Doctrine_Table_Exception} Unknown relation alias question
+Aug 16 14:01:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Aug 16 14:01:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 14:01:53 symfony [info] {sfWebDebugLogger} Configuration 55.05 ms (8)
+Aug 16 14:01:53 symfony [info] {sfWebDebugLogger} Factories 152.35 ms (1)
+Aug 16 14:01:53 symfony [info] {sfWebDebugLogger} Action "questions/index" 546.79 ms (1)
+Aug 16 14:02:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /questions/index with parameters array (  'module' => 'questions',  'action' => 'index',)
+Aug 16 14:02:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:02:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:02:17 symfony [info] {questionsActions} Call "questionsActions->executeIndex()"
+Aug 16 14:02:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 14:02:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at, q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM exams e INNER JOIN questions q ON e.id = q.exam_id WHERE (e.id = ?) - (1)
+Aug 16 14:03:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /questions/index with parameters array (  'module' => 'questions',  'action' => 'index',)
+Aug 16 14:03:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:03:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:03:13 symfony [info] {questionsActions} Call "questionsActions->executeIndex()"
+Aug 16 14:03:13 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 14:03:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at, q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM exams e INNER JOIN questions q ON e.id = q.exam_id WHERE (e.id = ?) - (1)
+Aug 16 14:03:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /questions/index with parameters array (  'module' => 'questions',  'action' => 'index',)
+Aug 16 14:03:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:03:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:03:54 symfony [info] {questionsActions} Call "questionsActions->executeIndex()"
+Aug 16 14:03:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 14:03:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at, q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM exams e INNER JOIN questions q ON e.id = q.exam_id WHERE (e.id = ?) - (1)
+Aug 16 14:04:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /questions/index with parameters array (  'module' => 'questions',  'action' => 'index',)
+Aug 16 14:04:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:04:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:04:02 symfony [info] {questionsActions} Call "questionsActions->executeIndex()"
+Aug 16 14:04:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 14:04:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at, q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM exams e INNER JOIN questions q ON e.id = q.exam_id WHERE (e.id = ?) - (1)

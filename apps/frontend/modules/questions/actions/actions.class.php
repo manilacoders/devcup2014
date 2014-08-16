@@ -17,8 +17,16 @@ class questionsActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $question = QuestionTable::getInstance();
-    $q = $question->createQuery('q');
-      ->where('q.id = ?', $id);
+    $id = 1;
+
+    $exam = ExamTable::getInstance();
+    $q = $exam->createQuery('e');
+    $q
+      ->where('e.id = ?', $id)
+      ->innerJoin('e.questions q');
+
+    echo '<pre>';
+    print_r($q->fetchArray());
+    exit;
   }
 }
