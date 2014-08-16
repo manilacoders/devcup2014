@@ -1021,3 +1021,822 @@ Aug 16 14:52:03 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/fron
 Aug 16 14:52:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
 Aug 16 14:52:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Aug 16 14:52:03 symfony [info] {sfWebResponse} Send content (957 o)
+Aug 16 14:52:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 14:52:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:52:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:52:44 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 14:52:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 14:52:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 14:52:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 14:52:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 14:52:46 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/escaper/sfOutputEscaperArrayDecorator.class.php on line 119 (Undefined index: name)
+Aug 16 14:52:46 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:52:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:52:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 14:52:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 14:52:46 symfony [info] {sfWebResponse} Send content (957 o)
+Aug 16 14:53:24 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 14:53:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:53:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:53:25 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 14:53:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 14:53:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 14:53:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 14:53:27 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 14:53:27 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/escaper/sfOutputEscaperArrayDecorator.class.php on line 119 (Undefined index: name)
+Aug 16 14:53:27 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:53:27 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:53:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 14:53:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 14:53:27 symfony [info] {sfWebResponse} Send content (971 o)
+Aug 16 14:54:08 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 14:54:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 14:54:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 14:54:09 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 14:54:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 14:54:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 14:54:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 14:54:11 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 14:54:11 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/escaper/sfOutputEscaperArrayDecorator.class.php on line 119 (Undefined index: name)
+Aug 16 14:54:11 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:54:11 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 14:54:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 14:54:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 14:54:11 symfony [info] {sfWebResponse} Send content (979 o)
+Aug 16 15:00:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:00:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:00:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:00:48 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:00:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:00:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:00:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:00:49 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:00:49 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/escaper/sfOutputEscaperArrayDecorator.class.php on line 119 (Undefined index: name)
+Aug 16 15:00:49 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:00:49 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:00:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:00:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:00:49 symfony [info] {sfWebResponse} Send content (981 o)
+Aug 16 15:01:34 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:01:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:01:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:01:35 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:01:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:01:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:01:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:01:37 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:01:37 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:01:37 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:01:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:01:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:01:37 symfony [info] {sfWebResponse} Send content (857 o)
+Aug 16 15:03:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:03:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:03:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:03:46 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:03:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:03:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:03:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:03:48 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:03:49 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:03:49 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:03:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:03:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:03:49 symfony [info] {sfWebResponse} Send content (864 o)
+Aug 16 15:05:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:05:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:05:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:05:14 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:05:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:06:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:06:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:06:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:06:02 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:06:02 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:06:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:06:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:06:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:06:14 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:06:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:06:14 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:06:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:06:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:06:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:06:14 symfony [info] {sfWebResponse} Send content (745 o)
+Aug 16 15:06:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:06:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:06:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:06:22 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:06:22 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:06:22 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:06:22 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:06:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:06:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:06:22 symfony [info] {sfWebResponse} Send content (749 o)
+Aug 16 15:06:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:06:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:06:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:06:46 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:06:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:06:46 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:06:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:06:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:06:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:06:46 symfony [info] {sfWebResponse} Send content (753 o)
+Aug 16 15:07:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:07:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:07:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:07:39 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:07:39 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:07:39 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:07:39 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:07:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:07:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:07:39 symfony [info] {sfWebResponse} Send content (1060 o)
+Aug 16 15:08:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:08:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:08:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:08:48 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:08:48 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:08:48 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php on line 4 (Undefined variable: type)
+Aug 16 15:08:48 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:08:48 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:08:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:08:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:08:48 symfony [info] {sfWebResponse} Send content (1113 o)
+Aug 16 15:09:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:09:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:09:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:09:15 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:09:15 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:09:15 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:09:15 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:09:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:09:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:09:15 symfony [info] {sfWebResponse} Send content (857 o)
+Aug 16 15:10:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:10:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:10:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:10:20 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:10:20 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:10:20 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:10:20 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:10:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:10:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:10:20 symfony [info] {sfWebResponse} Send content (901 o)
+Aug 16 15:10:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:10:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:10:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:10:33 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:10:33 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:10:33 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:10:33 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:10:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:10:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:10:33 symfony [info] {sfWebResponse} Send content (921 o)
+Aug 16 15:11:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:11:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:11:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:11:07 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:11:07 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:11:07 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:11:07 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:11:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:11:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:11:07 symfony [info] {sfWebResponse} Send content (988 o)
+Aug 16 15:11:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:11:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:11:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:11:31 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:11:31 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:11:31 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:11:31 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:11:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:11:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:11:31 symfony [info] {sfWebResponse} Send content (988 o)
+Aug 16 15:12:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:12:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:12:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:12:15 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:12:15 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:12:15 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:12:15 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:12:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:12:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:12:15 symfony [info] {sfWebResponse} Send content (1055 o)
+Aug 16 15:12:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:12:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:12:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:12:46 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:12:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:12:47 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:12:47 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:12:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:12:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:12:47 symfony [info] {sfWebResponse} Send content (1040 o)
+Aug 16 15:12:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:12:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:12:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:12:56 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:12:56 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:12:56 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:12:56 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:12:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:12:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:12:56 symfony [info] {sfWebResponse} Send content (1040 o)
+Aug 16 15:13:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:13:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:13:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:13:41 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:13:41 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:13:42 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:13:42 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:13:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:13:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:13:42 symfony [info] {sfWebResponse} Send content (997 o)
+Aug 16 15:14:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:14:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:14:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:14:10 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:14:10 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:14:10 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:10 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:14:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:14:10 symfony [info] {sfWebResponse} Send content (993 o)
+Aug 16 15:14:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:14:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:14:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:14:15 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:14:16 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:14:16 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:16 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:14:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:14:16 symfony [info] {sfWebResponse} Send content (1056 o)
+Aug 16 15:14:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:14:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:14:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:14:31 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:14:31 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:14:31 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:31 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:14:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:14:31 symfony [info] {sfWebResponse} Send content (976 o)
+Aug 16 15:14:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:14:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:14:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:14:37 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:14:38 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:14:38 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:38 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:14:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:14:38 symfony [info] {sfWebResponse} Send content (980 o)
+Aug 16 15:14:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:14:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:14:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:14:49 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:14:49 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:14:49 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:49 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:14:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:14:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:14:49 symfony [info] {sfWebResponse} Send content (994 o)
+Aug 16 15:15:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:15:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:15:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:15:37 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:15:37 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:15:37 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:15:37 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:15:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:15:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:15:37 symfony [info] {sfWebResponse} Send content (1092 o)
+Aug 16 15:16:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:16:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:16:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:16:02 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:16:02 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:16:03 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:16:03 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:16:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:16:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:16:03 symfony [info] {sfWebResponse} Send content (1103 o)
+Aug 16 15:17:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:17:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:17:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:17:48 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:17:48 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:17:49 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:17:49 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:17:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:17:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:17:49 symfony [info] {sfWebResponse} Send content (1389 o)
+Aug 16 15:20:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:20:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:20:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:20:18 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:20:18 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:20:18 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:18 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:20:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:20:18 symfony [info] {sfWebResponse} Send content (1592 o)
+Aug 16 15:20:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:20:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:20:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:20:24 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:20:25 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:20:25 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:25 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:20:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:20:25 symfony [info] {sfWebResponse} Send content (1591 o)
+Aug 16 15:20:28 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:20:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:20:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:20:29 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:20:29 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:20:29 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:29 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:20:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:20:29 symfony [info] {sfWebResponse} Send content (1595 o)
+Aug 16 15:20:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:20:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:20:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:20:44 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:20:44 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:20:44 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:44 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:20:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:20:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:20:44 symfony [info] {sfWebResponse} Send content (1610 o)
+Aug 16 15:21:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:21:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:21:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:21:13 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:21:13 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:21:13 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:21:13 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:21:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:21:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:21:13 symfony [info] {sfWebResponse} Send content (1563 o)
+Aug 16 15:21:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:21:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:21:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:21:19 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:21:19 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:21:19 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:21:19 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:21:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:21:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:21:19 symfony [info] {sfWebResponse} Send content (1563 o)
+Aug 16 15:21:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:21:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:21:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:21:39 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:21:39 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "profile_id" on "Question"
+Aug 16 15:21:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Aug 16 15:21:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:22:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /security/login with parameters array (  'module' => 'security',  'action' => 'login',)
+Aug 16 15:22:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:22:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:22:19 symfony [info] {securityActions} Call "securityActions->executeLogin()"
+Aug 16 15:22:19 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/security/templates/loginSuccess.php"
+Aug 16 15:22:19 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:19 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:22:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:22:19 symfony [info] {sfWebResponse} Send content (701 o)
+Aug 16 15:22:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /security/login with parameters array (  'module' => 'security',  'action' => 'login',)
+Aug 16 15:22:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:22:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:22:25 symfony [info] {securityActions} Call "securityActions->executeLogin()"
+Aug 16 15:22:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:22:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.type AS p__type, p.first_name AS p__first_name, p.middle_name AS p__middle_name, p.last_name AS p__last_name, p.email AS p__email, p.password AS p__password, p.section_id AS p__section_id, p.is_active AS p__is_active, p.email_token AS p__email_token, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM profiles p WHERE (p.email = ? AND p.password = ?) LIMIT 1 - (daison12006013@gmail.com, 27904620)
+Aug 16 15:22:26 symfony [info] {sfFrontWebController} Redirect to "http://devcup.daison.dev:6900/frontend_dev.php/tempExams"
+Aug 16 15:22:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Aug 16 15:22:26 symfony [info] {sfWebResponse} Send header "Location: http://devcup.daison.dev:6900/frontend_dev.php/tempExams"
+Aug 16 15:22:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:22:26 symfony [info] {sfWebResponse} Send content (127 o)
+Aug 16 15:22:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempExams with parameters array (  'module' => 'tempExams',  'action' => 'index',)
+Aug 16 15:22:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:22:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:22:26 symfony [info] {tempExamsActions} Call "tempExamsActions->executeIndex()"
+Aug 16 15:22:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:22:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.profile_id = ?) - (1)
+Aug 16 15:22:27 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempExams/templates/indexSuccess.php"
+Aug 16 15:22:27 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:27 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:22:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:22:27 symfony [info] {sfWebResponse} Send content (920 o)
+Aug 16 15:22:39 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:22:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:22:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:22:40 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:22:41 symfony [err] {Doctrine_Table_Exception} You must specify the value to findOneBy
+Aug 16 15:22:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Aug 16 15:22:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:22:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:22:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:22:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:22:44 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:22:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:22:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:22:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:22:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:22:46 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:22:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:22:46 symfony [info] {sfWebResponse} Send content (864 o)
+Aug 16 15:22:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:22:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:22:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:22:53 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:22:53 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:22:53 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:53 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:22:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:22:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:22:53 symfony [info] {sfWebResponse} Send content (1556 o)
+Aug 16 15:23:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:23:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:23:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:23:07 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:23:08 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "profile_id" on "Question"
+Aug 16 15:23:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Aug 16 15:23:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:23:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:23:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:23:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:23:33 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:23:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:23:35 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO questions (type, question, metadata, answer, exam_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (choice, test, s:17:"["a","b","c","d"]";, c, 1, 2014-08-16 15:23:34, 2014-08-16 15:23:34)
+Aug 16 15:23:35 symfony [info] {sfFrontWebController} Redirect to "http://devcup.daison.dev:6900/frontend_dev.php/tempQuestions?exam_id=1"
+Aug 16 15:23:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Aug 16 15:23:35 symfony [info] {sfWebResponse} Send header "Location: http://devcup.daison.dev:6900/frontend_dev.php/tempQuestions?exam_id=1"
+Aug 16 15:23:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:23:35 symfony [info] {sfWebResponse} Send content (141 o)
+Aug 16 15:23:37 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:23:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:23:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:23:37 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:23:39 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:23:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:23:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:23:39 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:23:40 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:23:40 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:23:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:23:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:23:40 symfony [info] {sfWebResponse} Send content (1000 o)
+Aug 16 15:24:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:24:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:24:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:24:27 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:24:27 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:24:27 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:24:27 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:24:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:24:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:24:27 symfony [info] {sfWebResponse} Send content (1556 o)
+Aug 16 15:24:39 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:24:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:24:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:24:39 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:24:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:24:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:24:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:24:40 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:24:40 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:24:40 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:24:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:24:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:24:40 symfony [info] {sfWebResponse} Send content (1000 o)
+Aug 16 15:24:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create/exam_id/1 with parameters array (  'module' => 'tempQuestions',  'action' => 'create',  'exam_id' => '1',)
+Aug 16 15:24:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:24:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:24:52 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:24:52 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:24:52 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:24:52 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:24:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:24:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:24:52 symfony [info] {sfWebResponse} Send content (1556 o)
+Aug 16 15:25:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:25:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:25:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:25:24 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:25:24 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:25:24 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:25:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:25:25 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:25:25 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php on line 1 (Undefined variable: list)
+Aug 16 15:25:25 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:25:25 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:25:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:25:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:25:25 symfony [info] {sfWebResponse} Send content (1009 o)
+Aug 16 15:25:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /<br /><b>Notice</b>:  Undefined variable: list in <b>/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php</b> on line <b>1</b><br />/frontend_dev.php/tempQuestions/create/exam_id/ with parameters array (  'module' => '<br ',  'action' => '><b>Notice<',  'b>:  Undefined variable: list in <b>' => 'var',  'www' => 'devcup2014',  'apps' => 'frontend',  'modules' => 'tempQuestions',  'templates' => 'indexSuccess.php<',  'b> on line <b>1<' => 'b><br ',  '>' => 'frontend_dev.php',  'tempQuestions' => 'create',  'exam_id' => '',)
+Aug 16 15:25:30 symfony [info] {sfFrontWebController} Action "br/bNotice" does not exist
+Aug 16 15:25:30 symfony [err] {sfError404Exception} Action "br/bNotice" does not exist.
+Aug 16 15:25:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 16 15:25:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:25:37 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:25:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:25:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:25:37 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:25:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:25:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:25:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:25:38 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:25:38 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php on line 1 (Undefined variable: list)
+Aug 16 15:25:38 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:25:38 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:25:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:25:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:25:38 symfony [info] {sfWebResponse} Send content (1009 o)
+Aug 16 15:25:55 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:25:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:25:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:25:56 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:25:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:25:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:25:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:25:58 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:25:58 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:25:58 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:25:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:25:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:25:58 symfony [info] {sfWebResponse} Send content (1000 o)
+Aug 16 15:26:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 15:26:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:26:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:26:03 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 15:26:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 15:26:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 15:26:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 15:26:04 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 15:26:05 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:26:05 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:26:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:26:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:26:05 symfony [info] {sfWebResponse} Send content (1000 o)
+Aug 16 15:26:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:26:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:26:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:26:10 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:26:10 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:26:11 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:26:11 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:26:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:26:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:26:11 symfony [info] {sfWebResponse} Send content (1556 o)
+Aug 16 15:34:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:34:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:34:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:34:41 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:34:41 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:34:41 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:34:42 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:34:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:34:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:34:42 symfony [info] {sfWebResponse} Send content (1552 o)
+Aug 16 15:39:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:39:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:39:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:39:46 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:39:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:39:46 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:39:46 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:39:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:39:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:39:46 symfony [info] {sfWebResponse} Send content (1800 o)
+Aug 16 15:39:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:39:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:39:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:39:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:39:53 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:39:53 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:39:53 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:39:53 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:39:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:39:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:39:53 symfony [info] {sfWebResponse} Send content (1804 o)
+Aug 16 15:39:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:39:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:39:53 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:39:53 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:39:53 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:39:53 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:39:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:39:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:39:53 symfony [info] {sfWebResponse} Send content (1804 o)
+Aug 16 15:40:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:40:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:40:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:40:14 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:40:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:40:15 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:40:15 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:40:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:40:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:40:15 symfony [info] {sfWebResponse} Send content (1844 o)
+Aug 16 15:40:28 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:40:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:40:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:40:28 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:40:28 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:40:29 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:40:29 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:40:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:40:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:40:29 symfony [info] {sfWebResponse} Send content (1812 o)
+Aug 16 15:40:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:40:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:40:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:40:56 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:40:56 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:40:56 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:40:56 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:40:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:40:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:40:56 symfony [info] {sfWebResponse} Send content (1848 o)
+Aug 16 15:41:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:41:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:41:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:41:23 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:41:23 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:41:23 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:41:23 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:41:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:41:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:41:23 symfony [info] {sfWebResponse} Send content (1848 o)
+Aug 16 15:46:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:46:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:46:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:46:10 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:46:10 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:46:10 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:46:10 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:46:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:46:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:46:10 symfony [info] {sfWebResponse} Send content (1864 o)
+Aug 16 15:46:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:46:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:46:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:46:20 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:46:20 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 38 (Undefined index: key)
+Aug 16 15:46:20 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 38 (Invalid argument supplied for foreach())
+Aug 16 15:47:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:47:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:47:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:47:08 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:47:08 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 40 (Undefined index: key)
+Aug 16 15:47:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 40 (Invalid argument supplied for foreach())
+Aug 16 15:47:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:47:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:47:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:47:50 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:47:50 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:47:50 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:47:50 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:47:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:47:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:47:50 symfony [info] {sfWebResponse} Send content (1864 o)
+Aug 16 15:49:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:49:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:49:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:49:43 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:49:43 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:49:43 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:49:43 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:49:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:49:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:49:43 symfony [info] {sfWebResponse} Send content (1828 o)
+Aug 16 15:49:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:49:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:49:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:49:48 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:49:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:49:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:49:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:49:59 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:50:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:50:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:50:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:50:09 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:57:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:57:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:57:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:57:44 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:57:44 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 39 (Undefined index: value)
+Aug 16 15:57:44 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 41 (Undefined index: value)
+Aug 16 15:57:44 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 39 (Undefined index: value)
+Aug 16 15:57:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:57:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:57:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:57:51 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:57:51 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 39 (Undefined index: value)
+Aug 16 15:57:51 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 39 (Undefined index: value)
+Aug 16 15:57:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:57:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:57:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:57:56 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:57:56 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 39 (Undefined index: value)
+Aug 16 15:57:56 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 39 (Undefined index: value)
+Aug 16 15:58:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:58:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:58:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:58:04 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:58:04 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 41 (Undefined offset: 4)
+Aug 16 15:58:04 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/devcup2014/apps/frontend/modules/tempQuestions/actions/actions.class.php on line 41 (Undefined offset: 4)
+Aug 16 15:58:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:58:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:58:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:58:13 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:58:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 15:58:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 15:58:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 15:58:23 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 15:58:23 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 15:58:24 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:58:24 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 15:58:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 15:58:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 15:58:24 symfony [info] {sfWebResponse} Send content (1828 o)
+Aug 16 16:01:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 16:01:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:01:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:01:21 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 16:01:21 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 16:01:22 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:01:22 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:01:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:01:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:01:22 symfony [info] {sfWebResponse} Send content (1838 o)
+Aug 16 16:01:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 16:01:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:01:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:01:45 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 16:01:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:01:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO questions (type, question, metadata, answer, exam_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (choice, Do you eat shit, s:55:"[{"a":"tama"},{"b":"mali"},{"c":"pwede"},{"d":"hindi"}]";, c, 1, 2014-08-16 16:01:46, 2014-08-16 16:01:46)
+Aug 16 16:01:46 symfony [info] {sfFrontWebController} Redirect to "http://devcup.daison.dev:6900/frontend_dev.php/tempQuestions?exam_id=1"
+Aug 16 16:01:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Aug 16 16:01:46 symfony [info] {sfWebResponse} Send header "Location: http://devcup.daison.dev:6900/frontend_dev.php/tempQuestions?exam_id=1"
+Aug 16 16:01:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:01:46 symfony [info] {sfWebResponse} Send content (141 o)
+Aug 16 16:01:49 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 16:01:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:01:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:01:49 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 16:01:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:01:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 16:01:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 16:01:52 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 16:01:52 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:01:52 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:01:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:01:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:01:52 symfony [info] {sfWebResponse} Send content (1147 o)
+Aug 16 16:03:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tempQuestions/create with parameters array (  'module' => 'tempQuestions',  'action' => 'create',)
+Aug 16 16:03:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:03:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:03:22 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeCreate()"
+Aug 16 16:03:22 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/createSuccess.php"
+Aug 16 16:03:23 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:03:23 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:03:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:03:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:03:23 symfony [info] {sfWebResponse} Send content (1838 o)
+Aug 16 16:04:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 16:04:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:04:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:04:13 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 16:04:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:04:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 16:04:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 16:04:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 16:04:14 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:04:14 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:04:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:04:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:04:14 symfony [info] {sfWebResponse} Send content (1157 o)
+Aug 16 16:04:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tempQuestions with parameters array (  'module' => 'tempQuestions',  'action' => 'index',)
+Aug 16 16:04:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 16:04:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 16:04:27 symfony [info] {tempQuestionsActions} Call "tempQuestionsActions->executeIndex()"
+Aug 16 16:04:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 16:04:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.name AS e__name, e.profile_id AS e__profile_id, e.active_at AS e__active_at, e.end_at AS e__end_at, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM exams e WHERE (e.id = ?) LIMIT 1 - (1)
+Aug 16 16:04:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT q.id AS q__id, q.type AS q__type, q.question AS q__question, q.metadata AS q__metadata, q.answer AS q__answer, q.exam_id AS q__exam_id, q.created_at AS q__created_at, q.updated_at AS q__updated_at FROM questions q WHERE (q.exam_id = ?) - (1)
+Aug 16 16:04:28 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/tempQuestions/templates/indexSuccess.php"
+Aug 16 16:04:28 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:04:28 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 16:04:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 16:04:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 16:04:28 symfony [info] {sfWebResponse} Send content (911 o)

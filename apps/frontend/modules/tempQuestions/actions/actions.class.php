@@ -25,18 +25,44 @@ class tempQuestionsActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
+    $exam_id = $request->getParameter('exam_id');
+
+
     if ($request->isMethod(sfRequest::POST)) {
       $user = $this->getUser();
       $post = $request->getPostParameters();
 
-      $exam = new Exam;
-      $exam
-        ->setName($post['name'])
-        ->setProfileId($user->getAttribute('profile_id'))
+      //get the answer
+      $arr = array();
+      if ($post['type'] == 'choice') {
+        $answer = $post['answer'];
+        for($i=0;$i<count($post['choices']['val']);$i++) {
+          $arr[] = array(
+            $post['choices']['key'][$i] => $post['choices']['val'][$i],
+          );
+        }
+      } else {
+        $arr = $post['choices']['val'][0];
+      }
+
+      // save to database
+      $question = new Question;
+      $question
+        ->setType($post['type'])
+        ->setQuestion($post['question'])
+        ->setMetaData(json_encode($arr))
+        ->setAnswer($post['answer'])
+        ->setExamId($post['exam_id'])
         ->save();
 
-      $this->redirect('tempExams/index');
+      $this->redirect('tempQuestions/index?exam_id='.$post['exam_id']);
     }
+
+    $this->types = array(
+      'choice' => 'Choices',
+      'text' => 'Essay',
+    );
+    $this->exam_id = $exam_id;
   }
 
   public function executeEdit(sfWebRequest $request)
