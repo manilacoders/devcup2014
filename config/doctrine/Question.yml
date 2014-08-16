@@ -3,6 +3,8 @@ Exam:
   columns:
     name: string(50)
     profile_id: integer
+    active_at: timestamp
+    end_at: timestamp
 
   relations:
     Profile:
@@ -30,9 +32,8 @@ Question:
 
   relations:
     Exam:
-      local: exam_id
-      foreignAlias: id
       alias: exam
+      foreignAlias: questions
 
   actAs:
     - Timestampable
