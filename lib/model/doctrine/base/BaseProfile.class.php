@@ -12,7 +12,7 @@
  * @property varchar $email
  * @property varchar $password
  * @property integer $section_id
- * @property varchar $status
+ * @property boolean $is_active
  * @property varchar $email_token
  * @property Section $section
  * 
@@ -23,7 +23,7 @@
  * @method varchar getEmail()       Returns the current record's "email" value
  * @method varchar getPassword()    Returns the current record's "password" value
  * @method integer getSectionId()   Returns the current record's "section_id" value
- * @method varchar getStatus()      Returns the current record's "status" value
+ * @method boolean getIsActive()    Returns the current record's "is_active" value
  * @method varchar getEmailToken()  Returns the current record's "email_token" value
  * @method Section getSection()     Returns the current record's "section" value
  * @method Profile setType()        Sets the current record's "type" value
@@ -33,7 +33,7 @@
  * @method Profile setEmail()       Sets the current record's "email" value
  * @method Profile setPassword()    Sets the current record's "password" value
  * @method Profile setSectionId()   Sets the current record's "section_id" value
- * @method Profile setStatus()      Sets the current record's "status" value
+ * @method Profile setIsActive()    Sets the current record's "is_active" value
  * @method Profile setEmailToken()  Sets the current record's "email_token" value
  * @method Profile setSection()     Sets the current record's "section" value
  * 
@@ -74,9 +74,8 @@ abstract class BaseProfile extends sfDoctrineRecord
         $this->hasColumn('section_id', 'integer', null, array(
              'type' => 'integer',
              ));
-        $this->hasColumn('status', 'varchar', 50, array(
-             'type' => 'varchar',
-             'length' => 50,
+        $this->hasColumn('is_active', 'boolean', null, array(
+             'type' => 'boolean',
              ));
         $this->hasColumn('email_token', 'varchar', 50, array(
              'type' => 'varchar',
@@ -118,6 +117,12 @@ abstract class BaseProfile extends sfDoctrineRecord
              'fields' => 
              array(
               0 => 'email_token',
+             ),
+             ));
+        $this->index('is_active', array(
+             'fields' => 
+             array(
+              0 => 'is_active',
              ),
              ));
     }

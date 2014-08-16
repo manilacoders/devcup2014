@@ -12,7 +12,7 @@ Profile:
     section_id: integer
 
     # Pending, Active
-    status: varchar(50) 
+    is_active: boolean
 
     email_token: varchar(50)
 
@@ -29,6 +29,8 @@ Profile:
       fields: [email]
     email_token:
       fields: [email_token]
+    is_active:
+      fields: [is_active]
 
   relations:
     Section:
