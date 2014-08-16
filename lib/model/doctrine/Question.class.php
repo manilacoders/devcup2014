@@ -12,4 +12,7 @@
  */
 class Question extends BaseQuestion
 {
+  const
+    TYPE_CHOICE = 'choice',
+    TYPE_TEXT = 'text';
 }
