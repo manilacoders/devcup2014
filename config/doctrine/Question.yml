@@ -1,0 +1,33 @@
+Exam:
+  tableName: 'exams'
+  columns:
+    name: string(50)
+    profile_id: integer
+
+  actAs:
+    - Timestampable
+
+
+Question:
+  tableName: 'questions'
+  columns:
+    # choice, text
+    type: string(50)
+    question: string
+    metadata: array
+    answer: string(50)
+
+    exam_id: integer
+
+  indexes:
+    type:
+      fields: [type]
+
+  relations:
+    Exam:
+      local: exam_id
+      foreignAlias: id
+      alias: exam
+
+  actAs:
+    - Timestampable
