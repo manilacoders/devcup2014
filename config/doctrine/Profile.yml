@@ -14,6 +14,8 @@ Profile:
     # Pending, Active
     status: varchar(50) 
 
+    email_token: varchar(50)
+
   indexes:
     type:
       fields: [type]
@@ -25,6 +27,8 @@ Profile:
       fields: [last_name]
     email:
       fields: [email]
+    email_token:
+      fields: [email_token]
 
   relations:
     Section:

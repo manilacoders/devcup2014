@@ -24,6 +24,7 @@ abstract class BaseProfileForm extends BaseFormDoctrine
       'password'    => new sfWidgetFormInputText(),
       'section_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('section'), 'add_empty' => true)),
       'status'      => new sfWidgetFormInputText(),
+      'email_token' => new sfWidgetFormInputText(),
       'created_at'  => new sfWidgetFormDateTime(),
       'updated_at'  => new sfWidgetFormDateTime(),
     ));
@@ -38,6 +39,7 @@ abstract class BaseProfileForm extends BaseFormDoctrine
       'password'    => new sfValidatorPass(array('required' => false)),
       'section_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('section'), 'required' => false)),
       'status'      => new sfValidatorPass(array('required' => false)),
+      'email_token' => new sfValidatorPass(array('required' => false)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
     ));

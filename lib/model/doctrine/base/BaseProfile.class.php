@@ -13,6 +13,7 @@
  * @property varchar $password
  * @property integer $section_id
  * @property varchar $status
+ * @property varchar $email_token
  * @property Section $section
  * 
  * @method varchar getType()        Returns the current record's "type" value
@@ -23,6 +24,7 @@
  * @method varchar getPassword()    Returns the current record's "password" value
  * @method integer getSectionId()   Returns the current record's "section_id" value
  * @method varchar getStatus()      Returns the current record's "status" value
+ * @method varchar getEmailToken()  Returns the current record's "email_token" value
  * @method Section getSection()     Returns the current record's "section" value
  * @method Profile setType()        Sets the current record's "type" value
  * @method Profile setFirstName()   Sets the current record's "first_name" value
@@ -32,6 +34,7 @@
  * @method Profile setPassword()    Sets the current record's "password" value
  * @method Profile setSectionId()   Sets the current record's "section_id" value
  * @method Profile setStatus()      Sets the current record's "status" value
+ * @method Profile setEmailToken()  Sets the current record's "email_token" value
  * @method Profile setSection()     Sets the current record's "section" value
  * 
  * @package    devcup2014
@@ -75,6 +78,10 @@ abstract class BaseProfile extends sfDoctrineRecord
              'type' => 'varchar',
              'length' => 50,
              ));
+        $this->hasColumn('email_token', 'varchar', 50, array(
+             'type' => 'varchar',
+             'length' => 50,
+             ));
 
 
         $this->index('type', array(
@@ -105,6 +112,12 @@ abstract class BaseProfile extends sfDoctrineRecord
              'fields' => 
              array(
               0 => 'email',
+             ),
+             ));
+        $this->index('email_token', array(
+             'fields' => 
+             array(
+              0 => 'email_token',
              ),
              ));
     }
