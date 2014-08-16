@@ -1,0 +1,21 @@
+Answer:
+  tableName: 'answers'
+  columns:
+    profile_id: integer
+    question_id: integer
+    answer: string(50)
+
+  indexes:
+    answer: 
+      fields: [answer]
+
+  relations:
+    Profile:
+      alias: profile
+      foreignAlias: profile_id
+    Question:
+      alias: question
+      foreignAlias: question_id
+
+  actAs:
+    - Timestampable

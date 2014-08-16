@@ -1,0 +1,5 @@
+autoload:
+  custom_classes:
+    name:           custom_classes
+    path:           %SF_LIB_DIR%/model/
+    recursive:      true
