@@ -11,19 +11,22 @@
  * @property string $answer
  * @property integer $exam_id
  * @property Exam $exam
+ * @property Doctrine_Collection $question_id
  * 
- * @method string   getType()     Returns the current record's "type" value
- * @method string   getQuestion() Returns the current record's "question" value
- * @method array    getMetadata() Returns the current record's "metadata" value
- * @method string   getAnswer()   Returns the current record's "answer" value
- * @method integer  getExamId()   Returns the current record's "exam_id" value
- * @method Exam     getExam()     Returns the current record's "exam" value
- * @method Question setType()     Sets the current record's "type" value
- * @method Question setQuestion() Sets the current record's "question" value
- * @method Question setMetadata() Sets the current record's "metadata" value
- * @method Question setAnswer()   Sets the current record's "answer" value
- * @method Question setExamId()   Sets the current record's "exam_id" value
- * @method Question setExam()     Sets the current record's "exam" value
+ * @method string              getType()        Returns the current record's "type" value
+ * @method string              getQuestion()    Returns the current record's "question" value
+ * @method array               getMetadata()    Returns the current record's "metadata" value
+ * @method string              getAnswer()      Returns the current record's "answer" value
+ * @method integer             getExamId()      Returns the current record's "exam_id" value
+ * @method Exam                getExam()        Returns the current record's "exam" value
+ * @method Doctrine_Collection getQuestionId()  Returns the current record's "question_id" collection
+ * @method Question            setType()        Sets the current record's "type" value
+ * @method Question            setQuestion()    Sets the current record's "question" value
+ * @method Question            setMetadata()    Sets the current record's "metadata" value
+ * @method Question            setAnswer()      Sets the current record's "answer" value
+ * @method Question            setExamId()      Sets the current record's "exam_id" value
+ * @method Question            setExam()        Sets the current record's "exam" value
+ * @method Question            setQuestionId()  Sets the current record's "question_id" collection
  * 
  * @package    devcup2014
  * @subpackage model
@@ -68,6 +71,10 @@ abstract class BaseQuestion extends sfDoctrineRecord
         $this->hasOne('Exam as exam', array(
              'local' => 'exam_id',
              'foreign' => 'id'));
+
+        $this->hasMany('Answer as question_id', array(
+             'local' => 'id',
+             'foreign' => 'question_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
