@@ -14,6 +14,10 @@ confirm:
   url:   confirm/:emailToken
   param: { module: profiles, action: register }
 
+forConfirmation:
+  url:   forConfirmation
+  param: { module: profiles, action: forConfirmation }
+
 # default rules
 homepage:
   url:   /

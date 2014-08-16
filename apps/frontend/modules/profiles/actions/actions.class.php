@@ -18,4 +18,14 @@ class profilesActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
   }
+
+  /**
+   * Executes Success action
+   *
+   * @param sfWebRequest  A request object
+   **/
+  public function executeForConfirmation(sfWebRequest $request)
+  {
+    
+  }
 }

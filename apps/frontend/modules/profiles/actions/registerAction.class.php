@@ -22,6 +22,8 @@ class registerAction extends sfAction
         Doctrine_Manager::connection()->rollback();
         throw $e;
       }
+
+      $this->redirect('@forConfirmation');
     }
   }
 
