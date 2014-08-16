@@ -1,7 +1,7 @@
 <div class="col-md-2" id="side-nav">
 	<ul class="nav nav-stacked">
-	  <li class="active" data-target-page="new">
-	    <a href="#">
+	  <li class="active">
+	    <a href="#" data-target-page="new">
 	      New Exam
 	    </a>
 	  </li>
@@ -24,5 +24,4 @@
 </div>
 
 <div class="col-md-8" id="main-panel">
-	test
 </div>
