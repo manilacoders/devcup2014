@@ -15,6 +15,7 @@
  * @property boolean $is_active
  * @property varchar $email_token
  * @property Section $section
+ * @property Doctrine_Collection $profile_id
  * @property Doctrine_Collection $exams
  * 
  * @method varchar             getType()        Returns the current record's "type" value
@@ -27,6 +28,7 @@
  * @method boolean             getIsActive()    Returns the current record's "is_active" value
  * @method varchar             getEmailToken()  Returns the current record's "email_token" value
  * @method Section             getSection()     Returns the current record's "section" value
+ * @method Doctrine_Collection getProfileId()   Returns the current record's "profile_id" collection
  * @method Doctrine_Collection getExams()       Returns the current record's "exams" collection
  * @method Profile             setType()        Sets the current record's "type" value
  * @method Profile             setFirstName()   Sets the current record's "first_name" value
@@ -38,6 +40,7 @@
  * @method Profile             setIsActive()    Sets the current record's "is_active" value
  * @method Profile             setEmailToken()  Sets the current record's "email_token" value
  * @method Profile             setSection()     Sets the current record's "section" value
+ * @method Profile             setProfileId()   Sets the current record's "profile_id" collection
  * @method Profile             setExams()       Sets the current record's "exams" collection
  * 
  * @package    devcup2014
@@ -136,6 +139,10 @@ abstract class BaseProfile extends sfDoctrineRecord
         $this->hasOne('Section as section', array(
              'local' => 'section_id',
              'foreign' => 'id'));
+
+        $this->hasMany('Answer as profile_id', array(
+             'local' => 'id',
+             'foreign' => 'profile_id'));
 
         $this->hasMany('Exam as exams', array(
              'local' => 'id',
