@@ -4,6 +4,11 @@ Exam:
     name: string(50)
     profile_id: integer
 
+  relations:
+    Profile:
+      alias: profile
+      foreignAlias: exams
+
   actAs:
     - Timestampable
 
