@@ -11,7 +11,9 @@
  * @property varchar $last_name
  * @property varchar $email
  * @property varchar $password
+ * @property integer $section_id
  * @property varchar $status
+ * @property Section $section
  * 
  * @method varchar getType()        Returns the current record's "type" value
  * @method varchar getFirstName()   Returns the current record's "first_name" value
@@ -19,14 +21,18 @@
  * @method varchar getLastName()    Returns the current record's "last_name" value
  * @method varchar getEmail()       Returns the current record's "email" value
  * @method varchar getPassword()    Returns the current record's "password" value
+ * @method integer getSectionId()   Returns the current record's "section_id" value
  * @method varchar getStatus()      Returns the current record's "status" value
+ * @method Section getSection()     Returns the current record's "section" value
  * @method Profile setType()        Sets the current record's "type" value
  * @method Profile setFirstName()   Sets the current record's "first_name" value
  * @method Profile setMiddleName()  Sets the current record's "middle_name" value
  * @method Profile setLastName()    Sets the current record's "last_name" value
  * @method Profile setEmail()       Sets the current record's "email" value
  * @method Profile setPassword()    Sets the current record's "password" value
+ * @method Profile setSectionId()   Sets the current record's "section_id" value
  * @method Profile setStatus()      Sets the current record's "status" value
+ * @method Profile setSection()     Sets the current record's "section" value
  * 
  * @package    devcup2014
  * @subpackage model
@@ -61,6 +67,9 @@ abstract class BaseProfile extends sfDoctrineRecord
         $this->hasColumn('password', 'varchar', 50, array(
              'type' => 'varchar',
              'length' => 50,
+             ));
+        $this->hasColumn('section_id', 'integer', null, array(
+             'type' => 'integer',
              ));
         $this->hasColumn('status', 'varchar', 50, array(
              'type' => 'varchar',
@@ -103,6 +112,10 @@ abstract class BaseProfile extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasOne('Section as section', array(
+             'local' => 'section_id',
+             'foreign' => 'id'));
+
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
         $this->actAs($timestampable0);

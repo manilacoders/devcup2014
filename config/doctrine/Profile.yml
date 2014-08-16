@@ -9,6 +9,7 @@ Profile:
     last_name: varchar(50)
     email: varchar(50)
     password: varchar(50)
+    section_id: integer
 
     # Pending, Active
     status: varchar(50) 
@@ -24,6 +25,12 @@ Profile:
       fields: [last_name]
     email:
       fields: [email]
+
+  relations:
+    Section:
+      local: section_id
+      foreignAlias: id
+      alias: section
 
   actAs:
     - Timestampable
