@@ -12,4 +12,7 @@
  */
 class Profile extends BaseProfile
 {
+  const
+    TYPE_TEACHER = 'teacher',
+    TYPE_STUDENT = 'student';
 }
