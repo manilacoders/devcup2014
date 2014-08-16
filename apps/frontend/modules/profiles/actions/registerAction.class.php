@@ -10,21 +10,15 @@ class registerAction extends sfAction
       $crypt = new RandomGenerator;
       $rand_text = $crypt->setToken(sfConfig::get('app_random_token'))->getCrypt();
 
-      // TODO: save the token to Profiles Field
       $profile = new Profile;
       $profile
-        ->setType()
-        ->setFirstName()
-        ->setMiddleName()
-        ->setLastName()
-        ->setEmail()
-        ->setPassword()
-        ->setStatus()
+        ->setType(Profile::TYPE_TEACHER)
+        ->setFirstName($post['f_name'])
+        ->setLastName($post['l_name'])
+        ->setEmail($post['email'])
+        ->setIsActive(false)
         ->setEmailToken($rand_text)
         ->save(); 
-      // TODO: save the $post to Profiles
-      // TODO: send email;
-
 
       $message = "Please click the link: http://www.google.com/" . $rand_text;
       $this->getMailer()->composeAndSend(sfConfig::get('app_email_noreply'), $post['email'], 'Subject', $message);

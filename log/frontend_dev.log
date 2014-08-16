@@ -160,3 +160,132 @@ Aug 16 12:34:11 symfony [info] {sfWebDebugLogger} Factories 103.56 ms (1)
 Aug 16 12:34:11 symfony [info] {sfWebDebugLogger} Action "profiles/register" 11588.89 ms (1)
 Aug 16 12:34:11 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 54.70 ms (1)
 Aug 16 12:34:11 symfony [info] {sfWebResponse} Send content (29127 o)
+Aug 16 13:16:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:16:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:16:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:16:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 13:16:42 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO profiles (type, first_name, middle_name, last_name, email, password, is_active, email_token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (teacher, Daison, Pascual, Carino, daison12006013@gmail.com, 1234, 0, a46539090565e27b6c03f5f3414d4e18, 2014-08-16 13:16:41, 2014-08-16 13:16:41)
+Aug 16 13:16:48 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/vendor/swiftmailer/classes/Swift/Transport/StreamBuffer.php on line 211 (Undefined property: Swift_Transport_StreamBuffer::$_sequence)
+Aug 16 13:16:50 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Subject" to "daison12006013@gmail.com"
+Aug 16 13:16:52 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:16:52 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:16:52 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:16:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:16:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:16:52 symfony [info] {sfWebDebugLogger} Configuration 1160.09 ms (10)
+Aug 16 13:16:52 symfony [info] {sfWebDebugLogger} Factories 263.39 ms (1)
+Aug 16 13:16:52 symfony [info] {sfWebDebugLogger} Action "profiles/register" 11163.49 ms (1)
+Aug 16 13:16:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Aug 16 13:16:52 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 112.40 ms (1)
+Aug 16 13:16:52 symfony [info] {sfWebResponse} Send content (31895 o)
+Aug 16 13:29:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:29:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:29:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:29:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 13:29:21 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO profiles (type, first_name, middle_name, last_name, email, password, is_active, email_token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (teacher, Daison, Pascual, Carino, daison12006013@gmail.com, 1234, 0, c7bf317ee47428ed388d96f241584253, 2014-08-16 13:29:21, 2014-08-16 13:29:21)
+Aug 16 13:29:29 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/vendor/swiftmailer/classes/Swift/Transport/StreamBuffer.php on line 211 (Undefined property: Swift_Transport_StreamBuffer::$_sequence)
+Aug 16 13:29:32 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Subject" to "daison12006013@gmail.com"
+Aug 16 13:29:34 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:29:34 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:29:34 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:29:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:29:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:29:34 symfony [info] {sfWebDebugLogger} Configuration 1108.72 ms (9)
+Aug 16 13:29:34 symfony [info] {sfWebDebugLogger} Factories 228.37 ms (1)
+Aug 16 13:29:34 symfony [info] {sfWebDebugLogger} Action "profiles/register" 13627.61 ms (1)
+Aug 16 13:29:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Aug 16 13:29:34 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 117.03 ms (1)
+Aug 16 13:29:34 symfony [info] {sfWebResponse} Send content (32089 o)
+Aug 16 13:29:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:29:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:29:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:29:50 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:29:50 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:29:50 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:29:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:29:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:29:50 symfony [info] {sfWebDebugLogger} Configuration 62.64 ms (9)
+Aug 16 13:29:50 symfony [info] {sfWebDebugLogger} Factories 155.06 ms (1)
+Aug 16 13:29:50 symfony [info] {sfWebDebugLogger} Action "profiles/register" 0.03 ms (1)
+Aug 16 13:29:50 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 63.45 ms (1)
+Aug 16 13:29:50 symfony [info] {sfWebResponse} Send content (26966 o)
+Aug 16 13:30:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:30:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:30:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:30:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 13:30:06 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO profiles (type, first_name, middle_name, last_name, email, password, is_active, email_token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (teacher, Daison, Pascual, Carino, daison12006013@gmail.com, 123yghadfkj, 0, ae8fc424aa302f2b507aff14e7047275, 2014-08-16 13:30:06, 2014-08-16 13:30:06)
+Aug 16 13:30:08 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/vendor/swiftmailer/classes/Swift/Transport/StreamBuffer.php on line 211 (Undefined property: Swift_Transport_StreamBuffer::$_sequence)
+Aug 16 13:30:11 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Subject" to "daison12006013@gmail.com"
+Aug 16 13:30:16 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:30:16 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:30:16 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:30:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:30:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:30:16 symfony [info] {sfWebDebugLogger} Configuration 61.07 ms (9)
+Aug 16 13:30:16 symfony [info] {sfWebDebugLogger} Factories 145.45 ms (1)
+Aug 16 13:30:16 symfony [info] {sfWebDebugLogger} Action "profiles/register" 10173.15 ms (1)
+Aug 16 13:30:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Aug 16 13:30:16 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 68.01 ms (1)
+Aug 16 13:30:16 symfony [info] {sfWebResponse} Send content (32092 o)
+Aug 16 13:32:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:32:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:32:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:32:45 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:32:45 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:32:45 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:32:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:32:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:32:45 symfony [info] {sfWebDebugLogger} Configuration 61.40 ms (9)
+Aug 16 13:32:45 symfony [info] {sfWebDebugLogger} Factories 160.13 ms (1)
+Aug 16 13:32:45 symfony [info] {sfWebDebugLogger} Action "profiles/register" 0.02 ms (1)
+Aug 16 13:32:45 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 65.79 ms (1)
+Aug 16 13:32:45 symfony [info] {sfWebResponse} Send content (26966 o)
+Aug 16 13:32:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:32:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:32:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:32:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 13:32:54 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO profiles (type, first_name, middle_name, last_name, email, password, is_active, email_token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (teacher, alksdjas, kljsdlkfjsdlf, ksdjflksdjf, daison12006013@gmail.com, 123123, 0, db12b8c2fa358e5d4397e863d5613a7b, 2014-08-16 13:32:53, 2014-08-16 13:32:53)
+Aug 16 13:33:06 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/vendor/swiftmailer/classes/Swift/Transport/StreamBuffer.php on line 211 (Undefined property: Swift_Transport_StreamBuffer::$_sequence)
+Aug 16 13:33:23 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Subject" to "daison12006013@gmail.com"
+Aug 16 13:33:37 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:33:37 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:33:37 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:33:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:33:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:33:37 symfony [info] {sfWebDebugLogger} Configuration 69.38 ms (9)
+Aug 16 13:33:37 symfony [info] {sfWebDebugLogger} Factories 160.03 ms (1)
+Aug 16 13:33:37 symfony [info] {sfWebDebugLogger} Action "profiles/register" 44093.73 ms (1)
+Aug 16 13:33:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (2)
+Aug 16 13:33:37 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 80.36 ms (1)
+Aug 16 13:33:37 symfony [info] {sfWebResponse} Send content (31934 o)
+Aug 16 13:35:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:35:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:35:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:35:00 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:35:00 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:35:00 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:35:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:35:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:35:00 symfony [info] {sfWebDebugLogger} Configuration 59.38 ms (9)
+Aug 16 13:35:00 symfony [info] {sfWebDebugLogger} Factories 148.84 ms (1)
+Aug 16 13:35:00 symfony [info] {sfWebDebugLogger} Action "profiles/register" 0.03 ms (1)
+Aug 16 13:35:00 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 71.82 ms (1)
+Aug 16 13:35:00 symfony [info] {sfWebResponse} Send content (26720 o)
+Aug 16 13:35:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /profiles/register with parameters array (  'module' => 'profiles',  'action' => 'register',)
+Aug 16 13:35:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 16 13:35:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 16 13:35:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 16 13:35:42 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO profiles (type, first_name, last_name, email, is_active, email_token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?) - (teacher, Daison, Carino, daison12006013@gmail.com, 0, 880321b5a886010165f215edb0cc0586, 2014-08-16 13:35:42, 2014-08-16 13:35:42)
+Aug 16 13:35:50 symfony [notice] {sfWebDebugLogger}  Notice at /vagrant/_lib/symfony/lib/vendor/swiftmailer/classes/Swift/Transport/StreamBuffer.php on line 211 (Undefined property: Swift_Transport_StreamBuffer::$_sequence)
+Aug 16 13:35:52 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Subject" to "daison12006013@gmail.com"
+Aug 16 13:35:55 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/modules/profiles/templates/registerSuccess.php"
+Aug 16 13:35:55 symfony [info] {sfPHPView} Decorate content with "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:35:55 symfony [info] {sfPHPView} Render "/var/www/devcup2014/apps/frontend/templates/layout.php"
+Aug 16 13:35:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 16 13:35:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} Configuration 63.28 ms (9)
+Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} Factories 157.17 ms (1)
+Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} Action "profiles/register" 13375.99 ms (1)
+Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (2)
+Aug 16 13:35:55 symfony [info] {sfWebDebugLogger} View "Success" for "profiles/register" 90.85 ms (1)
+Aug 16 13:35:55 symfony [info] {sfWebResponse} Send content (31653 o)
