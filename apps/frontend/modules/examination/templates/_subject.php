@@ -1,9 +1,9 @@
 <div class="well well-sm">
-	<form action="" method="POST" class="form-inline" role="form">
+	<form action="subjects/createNew" method="POST" class="form-inline" role="form">
 
 		<div class="form-group">
-			<label class="sr-only" for="">Subject Name</label>
-			<input type="email" class="form-control" placeholder="Subject">
+			<label class="sr-only" for="subject">Subject Name</label>
+			<input name="subject" class="form-control" placeholder="Subject">
 		</div>
 
 		<button type="submit" class="btn btn-primary">Add New Subject</button>
@@ -15,15 +15,19 @@
 		<thead>
 			<tr>
 				<th>Subject Name</th>
-				<th>Created By</th>
+				<th>Created Date</th>
+				<th>Updated Date</th>
 			</tr>
 		</thead>
 		<tbody>
 			<!-- populate -->
-			<tr>
-				<td>Math</td>
-				<td>Phillip</td>
-			</tr>
+			<?php foreach ($subjects as $subject): ?>
+				<tr>
+					<td><?php echo $subject['name'] ?></td>
+					<td><?php echo $subject['created_at'] ?></td>
+					<td><?php echo $subject['updated_at'] ?></td>
+				</tr>
+			<?php endforeach ?>
 		</tbody>
 	</table>
 </div>
