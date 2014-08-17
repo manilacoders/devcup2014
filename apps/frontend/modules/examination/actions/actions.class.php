@@ -52,10 +52,10 @@ class examinationActions extends sfActions
             ->save();
         }
 
+        Doctrine_Manager::connection()->commit();
+
         $this->getUser()->setFlash('success', 'Exam and Questions successfully added!');
         $this->redirect('@dashboard');
-        
-        Doctrine_Manager::connection()->commit();
       } catch (Exception $e) {
         Doctrine_Manager::connection()->rollback();
         throw $e;
