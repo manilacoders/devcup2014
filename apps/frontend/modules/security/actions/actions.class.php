@@ -12,18 +12,49 @@ class securityActions extends sfActions
 {
   public function executeLogin(sfWebRequest $request)
   {
-    if ($request->isMethod(sfRequest::POST)) {
-      $post = $request->getPostParameters();
+    $post = $request->getPostParameters();
 
-      $profile = ProfileTable::getInstance()->findOneByEmailAndPassword($post['email'], $post['password']);
-      if ($profile == false) {
-        throw new Exception('Email or Password no found');
+    if ($request->isMethod(sfRequest::POST)) {
+      $email = $request->getParameter('email');
+      $password = $request->getParameter('password');
+
+      $user = ProfileTable::getInstance()->findOneByEmail($post['email']);
+      $group = 'teacher';
+      if (! $user) {
+        $user = StudentTable::getInstance()->findOneByEmail($post['email']);
+        if (! $user) {
+          throw new Exception("Email address not yet registered");
+        }
+        $group = 'student';
       }
 
-      $this->getUser()->setAttribute('profile_id', $profile['id']);
-      $this->redirect('tempExams/index');
+      if ($user->getPassword() == self::_hashPassword($password)) {
+        $this->getUser()->setAuthenticated(true);
+        $this->getUser()->setAttribute('user', $user);
+
+        $this->getUser()->clearCredentials();
+        $this->getUser()->addCredentials(array($group));
+
+        if ($group == 'teacher') {
+          $this->redirect('dashboard/index');
+        } else {
+          $this->redirect('examination/list');
+        }
+        
+      } else {
+        throw new Exception("Access Denied, Invalid Username/Password");
+      }
     }
+  }
 
-
+  /**
+   * Short Description here.
+   *
+   * @author Kenn Capara
+   * @return void
+   */
+  public static function _hashPassword($password)
+  {
+    return sha1($password);
   }
 }
