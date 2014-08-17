@@ -14,14 +14,14 @@
 					<div class="form-group">
 						<label class="control-label col-md-2">Active At</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" placeholder="Active At" name="active_at">
+							<input type="text" class="form-control datepicker" placeholder="Active At" name="active_at">
 						</div>
 					</div>
 					
 					<div class="form-group">
 						<label class="control-label col-md-2">End At</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" placeholder="End At" name="end_at">
+							<input type="text" class="form-control datepicker" placeholder="End At" name="end_at">
 						</div>
 					</div>
 
@@ -65,7 +65,6 @@
 </form>
 
 <script>
-
 	var question_index = 0;
 
 	$('#main-panel').on('click', ' #question-type', function(e) {
@@ -82,6 +81,6 @@
 		.done(function(html) {
 			$('#generated-questions').append(html);
 			question_index++;
-		});
+		$('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 	});
 </script>

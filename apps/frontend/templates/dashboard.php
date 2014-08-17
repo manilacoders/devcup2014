@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/smoothness/jquery-ui.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,6 +35,7 @@
 
     <!-- jQuery -->
     <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
