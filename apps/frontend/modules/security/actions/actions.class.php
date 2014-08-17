@@ -48,6 +48,19 @@ class securityActions extends sfActions
   }
 
   /**
+   * Executes Logout action
+   *
+   * @param sfWebRequest  A request object
+   **/
+  public function executeLogout(sfWebRequest $request)
+  {
+    $this->getUser()->setAuthenticated(false);
+    $this->getUser()->shutdown();
+    session_destroy();
+    $this->redirect('@homepage');
+  }
+
+  /**
    * Short Description here.
    *
    * @author Kenn Capara
