@@ -19,8 +19,15 @@ class tempExamsActions extends sfActions
   {
     $user = $this->getUser();
 
-    $exams = ExamTable::getInstance()->findByProfileId($user->getAttribute('profile_id'));
-    $this->lists = $exams->toArray();
+    $exams = ExamTable::getInstance()->createQuery('e');
+    $exams
+      ->select('e.*, q.*, se.*, count(q.id) as q_count')
+      ->where('e.profile_id = ?', $user->getAttribute('profile_id'))
+      ->leftJoin('e.questions q')
+      ->groupBy('q.exam_id')
+      ->orderBy('created_at DESC');
+
+    $this->lists = $exams->fetchArray();
   }
 
   public function executeCreate(sfWebRequest $request)
