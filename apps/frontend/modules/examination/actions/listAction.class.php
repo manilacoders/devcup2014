@@ -14,6 +14,6 @@ class listAction extends sfActions
    **/
   public function execute($request)
   {
-    
+  	$this->setLayout('student');
   }
 }
