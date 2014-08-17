@@ -1,5 +1,11 @@
 <?php slot('current_section', 'dashboard') ?>
 
+<?php if ($sf_user->hasFlash('success')): ?>
+<div class="alert alert-success">
+	<?php echo $sf_user->getFlash('success') ?>
+</div>
+<?php endif ?>
+
 <div class="col-md-2" id="side-nav">
 	<ul class="nav nav-stacked">
 	  <li class="active">
