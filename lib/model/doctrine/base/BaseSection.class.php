@@ -9,15 +9,18 @@
  * @property integer $profile_id
  * @property Doctrine_Collection $id
  * @property Doctrine_Collection $students
+ * @property Doctrine_Collection $subjects
  * 
  * @method varchar             getName()       Returns the current record's "name" value
  * @method integer             getProfileId()  Returns the current record's "profile_id" value
  * @method Doctrine_Collection getId()         Returns the current record's "id" collection
  * @method Doctrine_Collection getStudents()   Returns the current record's "students" collection
+ * @method Doctrine_Collection getSubjects()   Returns the current record's "subjects" collection
  * @method Section             setName()       Sets the current record's "name" value
  * @method Section             setProfileId()  Sets the current record's "profile_id" value
  * @method Section             setId()         Sets the current record's "id" collection
  * @method Section             setStudents()   Sets the current record's "students" collection
+ * @method Section             setSubjects()   Sets the current record's "subjects" collection
  * 
  * @package    devcup2014
  * @subpackage model
@@ -49,6 +52,10 @@ abstract class BaseSection extends sfDoctrineRecord
              'refClass' => 'StudentSection',
              'local' => 'section_id',
              'foreign' => 'student_id'));
+
+        $this->hasMany('Subject as subjects', array(
+             'local' => 'id',
+             'foreign' => 'section_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

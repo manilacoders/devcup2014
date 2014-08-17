@@ -1,3 +1,5 @@
+<?php slot('current_section', 'dashboard') ?>
+
 <div class="col-md-2" id="side-nav">
 	<ul class="nav nav-stacked">
 	  <li class="active">

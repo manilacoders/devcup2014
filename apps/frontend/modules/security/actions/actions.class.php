@@ -42,7 +42,8 @@ class securityActions extends sfActions
         }
         
       } else {
-        throw new Exception("Access Denied, Invalid Username/Password");
+        $this->getUser()->setFlash('error', 'Access Denied, Invalid Username/Password');
+        $this-redirect($request->getReferer());
       }
     }
   }

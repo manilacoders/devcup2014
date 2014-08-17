@@ -17,7 +17,7 @@ class reportsActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    
+    $this->setLayout('dashboard');
   }
 
   public function executeMostExams(sfWebRequest $request)
