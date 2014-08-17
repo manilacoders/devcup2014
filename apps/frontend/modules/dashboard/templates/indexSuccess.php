@@ -5,6 +5,11 @@
 	      New Exam
 	    </a>
 	  </li>
+	  <li class="active">
+	    <a href="#" data-target-page="new">
+	      Subjects
+	    </a>
+	  </li>
 	  <li>
 	    <a href="#" data-target-page="manage">
 	      Manage Exams
@@ -23,5 +28,5 @@
 	</ul>
 </div>
 
-<div class="col-md-8" id="main-panel">
+<div class="col-md-10" id="main-panel">
 </div>

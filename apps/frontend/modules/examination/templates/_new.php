@@ -3,17 +3,24 @@
 		<div class="new-exam">
 			<div class="form-group">
 				<label class="sr-only" for="">Exam Name</label>
-				<input type="text" class="form-control" id="" placeholder="Exam Name">
+				<input type="text" class="form-control" placeholder="Exam Name">
 			</div>
 			
 			<div class="form-group">
 				<label class="sr-only" for="">Active At</label>
-				<input type="text" class="form-control" id="" placeholder="Active At" name="active_at">
+				<input type="text" class="form-control" placeholder="Active At" name="active_at">
 			</div>
 			
 			<div class="form-group">
 				<label class="sr-only" for="">End At</label>
-				<input type="text" class="form-control" id="" placeholder="End At" name="end_at">
+				<input type="text" class="form-control" placeholder="End At" name="end_at">
+			</div>
+
+			<div class="form-group">
+				<label class="sr-only" for="">Subject</label>
+				<select name="subject" class="form-control">
+					<option value="">-- Select Subject --</option>
+				</select>
 			</div>
 
 			<a href="#" class="btn btn-primary btn-sm" id="create-new">Create Exam</a>
@@ -29,11 +36,15 @@
 				<legend>
 					Question
 				</legend>
-				<div class="btn-group">
-					<a href="#" class="btn btn-primary" id="question-type">Add Question</a>
-				</div>
-				<div class="btn-group">
-					<a href="#" class="btn btn-success pull-right">Done</a>
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="btn-group">
+							<a href="#" class="btn btn-primary" id="question-type">Add Question</a>
+						</div>
+						<div class="btn-group">
+							<a href="#" class="btn btn-success pull-right">Done</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
