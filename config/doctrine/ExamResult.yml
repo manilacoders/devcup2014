@@ -1,0 +1,19 @@
+ExamResult:
+  tableName: 'exam_results'
+  columns:
+    student_id: integer
+    exam_id: integer
+    correct_count: integer
+    question_count: integer
+    score: integer
+
+  relations:
+    Student:
+      alias: student
+      foreignAlias: exam_results
+    Exam:
+      alias: exam
+      foreignAlias: exam_results
+
+  actAs:
+    - Timestampable

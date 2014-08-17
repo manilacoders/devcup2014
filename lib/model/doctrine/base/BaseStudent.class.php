@@ -13,23 +13,26 @@
  * @property integer $section_id
  * @property boolean $is_active
  * @property Doctrine_Collection $sections
+ * @property Doctrine_Collection $exam_results
  * 
- * @method varchar             getFirstName()   Returns the current record's "first_name" value
- * @method varchar             getMiddleName()  Returns the current record's "middle_name" value
- * @method varchar             getLastName()    Returns the current record's "last_name" value
- * @method varchar             getEmail()       Returns the current record's "email" value
- * @method varchar             getPassword()    Returns the current record's "password" value
- * @method integer             getSectionId()   Returns the current record's "section_id" value
- * @method boolean             getIsActive()    Returns the current record's "is_active" value
- * @method Doctrine_Collection getSections()    Returns the current record's "sections" collection
- * @method Student             setFirstName()   Sets the current record's "first_name" value
- * @method Student             setMiddleName()  Sets the current record's "middle_name" value
- * @method Student             setLastName()    Sets the current record's "last_name" value
- * @method Student             setEmail()       Sets the current record's "email" value
- * @method Student             setPassword()    Sets the current record's "password" value
- * @method Student             setSectionId()   Sets the current record's "section_id" value
- * @method Student             setIsActive()    Sets the current record's "is_active" value
- * @method Student             setSections()    Sets the current record's "sections" collection
+ * @method varchar             getFirstName()    Returns the current record's "first_name" value
+ * @method varchar             getMiddleName()   Returns the current record's "middle_name" value
+ * @method varchar             getLastName()     Returns the current record's "last_name" value
+ * @method varchar             getEmail()        Returns the current record's "email" value
+ * @method varchar             getPassword()     Returns the current record's "password" value
+ * @method integer             getSectionId()    Returns the current record's "section_id" value
+ * @method boolean             getIsActive()     Returns the current record's "is_active" value
+ * @method Doctrine_Collection getSections()     Returns the current record's "sections" collection
+ * @method Doctrine_Collection getExamResults()  Returns the current record's "exam_results" collection
+ * @method Student             setFirstName()    Sets the current record's "first_name" value
+ * @method Student             setMiddleName()   Sets the current record's "middle_name" value
+ * @method Student             setLastName()     Sets the current record's "last_name" value
+ * @method Student             setEmail()        Sets the current record's "email" value
+ * @method Student             setPassword()     Sets the current record's "password" value
+ * @method Student             setSectionId()    Sets the current record's "section_id" value
+ * @method Student             setIsActive()     Sets the current record's "is_active" value
+ * @method Student             setSections()     Sets the current record's "sections" collection
+ * @method Student             setExamResults()  Sets the current record's "exam_results" collection
  * 
  * @package    devcup2014
  * @subpackage model
@@ -108,6 +111,10 @@ abstract class BaseStudent extends sfDoctrineRecord
              'refClass' => 'StudentSection',
              'local' => 'student_id',
              'foreign' => 'section_id'));
+
+        $this->hasMany('ExamResult as exam_results', array(
+             'local' => 'id',
+             'foreign' => 'student_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
