@@ -17,6 +17,7 @@ class subjectsActions extends sfActions
    **/
   public function executeCreateNew(sfWebRequest $request)
   {
+    $this->setLayout('dashboard');
     $user = $this->getUser();
 
     $name = $request->getParameter('subject');
@@ -46,6 +47,9 @@ class subjectsActions extends sfActions
       Doctrine_Manager::connection()->rollback();
       throw $e;
     }
+
+    $this->getUser()->setFlash('success', 'Subject has been added');
+    $this->redirect('@dashboard');
 
   }
 
