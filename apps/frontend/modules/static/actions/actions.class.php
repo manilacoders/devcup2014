@@ -15,5 +15,20 @@ class staticActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
-  public function executeHome(sfWebRequest $request) {}
+  public function executeHome(sfWebRequest $request) 
+  {
+    $user = $this->getUser();
+    if ($user->isAuthenticated()) {
+      $credentials = $user->getCredentials();
+      switch ($creadentials[0]) {
+        case 'teacher':
+          $this->redirect("@dashboard");
+          break;
+        
+        default:
+          $this->redirect('examination/list');
+          break;
+      }
+    }
+  }
 }
