@@ -6,6 +6,36 @@
 	.navbar.layout, .navbar.student {
 		margin-bottom: 0px;
 	}
+	#reports {
+		.sub-menu {
+			margin-top: 0px;
+			display: none;
+			position: absolute;
+			width: 150px;
+			background: #2196F3;
+			li {
+				padding: 5px;
+				border-top: 1px solid #d0d9ff;
+				a {
+					color: #fff;
+				}
+			}
+			li:first-child {
+				border-top: none;
+			}
+		}
+		&:hover {
+			.sub-menu {
+				display: block;
+				li:hover {
+					border-left: 5px solid #3b50ce;
+					a {
+						background: none;
+					}
+				}
+			}
+		}
+	}
 	#login {
 		.modal-content {
 			border-radius: 0px;
