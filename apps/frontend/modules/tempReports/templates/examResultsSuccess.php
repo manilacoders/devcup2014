@@ -1,6 +1,6 @@
 <?php slot('current_section', 'reports') ?>
 
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-5">
   <h4>Exam Results</h4>
   <table class="table">
     <tr>
@@ -22,3 +22,19 @@
   </table>
 
 </div>
+
+<input class="hide" id="data" value="<?php echo $data ?>">
+
+<div class="col-md-7">
+  <canvas id="examResults" width="700" height="400"></canvas>
+</div>
+
+<?php slot('page_js') ?>
+  <script>
+    $(function() {
+      var data = $('#data').val();
+      var ctx = document.getElementById("examResults").getContext("2d");
+      var myNewChart = new Chart(ctx).Bar(JSON.parse(data));
+    });
+  </script>
+<?php end_slot() ?>
