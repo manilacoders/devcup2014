@@ -32,6 +32,7 @@
 			    </div>
   		  </div>
     	</div>
+      <?php $count++; ?>
 
 		<?php endforeach ?>
   	<button type="submit" class="btn btn-success">Submit Exam</button>

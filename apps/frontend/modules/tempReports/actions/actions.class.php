@@ -233,7 +233,7 @@ class tempReportsActions extends sfActions
       $overall_total = $overall_total / count($arr);
     }
 
-    $arr['Overall Total'] = array(
+    $arr['Total Average'] = array(
       'total' => $overall_total,
     );  
 
