@@ -15,3 +15,108 @@
 #     password: changeme
 #     name:     Kris Wallsmith
 #     email:    kris.wallsmith@symfony-project.com
+
+Profile:
+  teacher_1:
+    id: 1
+    first_name: Daison
+    middle_name: Pascual
+    last_name: Carino
+    email: daison12006013@gmail.com
+    is_active: true
+    password: <?php echo sha1('1234')."\n"; ?>
+    email_token: khsltjgbvsldjfhlsdkjfbskdhfkj
+
+  teacher_2:
+    id: 2
+    first_name: Kenn  
+    middle_name: 
+    last_name: Capara
+    email: email@gmail.com
+    is_active: true
+    password: <?php echo sha1('123qwe')."\n"; ?>
+    email_token: lkhwoeubkljvojhwoiendmfnsd
+
+  teacher_3:
+    id: 3
+    first_name: Phillip
+    middle_name: 
+    last_name: Villarosa
+    email: email@gmail.com
+    is_active: true
+    password: <?php echo sha1('123qwe')."\n"; ?>
+    email_token: qjwhsndfbkuehkjsgoijj
+
+Section:
+  section_daison:
+    id: 1
+    name: Newton
+    profile_id: 1
+  section_kenn:
+    id: 2
+    name: Einstein
+    profile_id: 2
+  section_phillip:
+    id: 3
+    name: Gallelio
+    profile_id: 3
+
+Student:
+  <?php for($i=1;$i<=100;$i++): ?>
+
+  student_<?php echo $i ?>:
+    id: <?php echo $i . "\n" ?>
+    first_name: Student<?php echo $i . "\n" ?>
+    email: student<?php echo $i ?>@gmail.com
+    password: <?php echo sha1('123qwe') . "\n" ?>
+  <?php endfor ?>
+
+StudentSection:
+  
+  <?php for($i=1;$i<=100;$i++): ?>
+  <?php
+    $x = array(
+        1,
+        2,
+        3,
+    );
+    $section = array_rand($x);
+  ?>
+
+  student_section_<?php echo $i ?>:
+    student_id: <?php echo $i . "\n" ?>
+    section_id: <?php echo $x[$section] ?>
+
+  <?php endfor ?>
+
+Subject:
+  subject_1:
+    name: Sibika At Kultura
+    profile_id: 1
+  subject_2:
+    name: Mathematics
+    profile_id: 2
+  subject_3:
+    name: Automatics
+    profile_id: 3
+
+Exam:
+  exam_1:
+    name: Exam 1 for Teacher Daison
+    profile_id: 1
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 1
+  exam_2:
+    name: Exam 1 for Teacher Daison
+    profile_id: 1
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 2
+  exam_3:
+    name: Exam 1 for Teacher Daison
+    profile_id: 1
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 3
+
