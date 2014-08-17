@@ -47,11 +47,20 @@ class examinationActions extends sfActions
 				break;
 
 			case 'manage':
-				return $this->renderPartial('examination/manage');
+        $exams = ExamTable::getInstance()->findByProfileId($profile['id']);
+
+				return $this->renderPartial('examination/manage', array(
+          'exams' => $exams->toArray(),
+        ));
 				break;
 
 			case 'schedules':
-				return $this->renderPartial('examination/schedules');
+        $exams = ExamTable::getInstance()->findByProfileId($profile['id']);
+  
+
+				return $this->renderPartial('examination/schedules', array(
+          'exams' => $exams->toArray(),
+        ));
 				break;
 			
 			default:

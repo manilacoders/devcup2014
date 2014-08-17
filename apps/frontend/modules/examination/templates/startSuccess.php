@@ -1,7 +1,8 @@
-<h3 class='page-header'>Exam for <?php echo $exam_name ?></h3>
+<h3 class='page-header'>Exam for <?php echo $exam['name'] ?></h3>
 <legend>Questionnaires</legend>
 <div class="col-lg-12">
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" action="/examination/compute" method='post'>
+    <input type="hidden" name="exam_id" value="<?php echo $exam['id'] ?>">
 		<?php foreach ($questions as $question): ?>
     	<div class="panel panel-warning">
   		  <div class="panel-heading">
@@ -16,22 +17,22 @@
 			    		<label>
 				    		<div class="checkbox">
 				    			<label>
-					    			<input type="radio" name="answer[]" value="<?php echo $question['metadata']['values']['a'] ?>"> <?php echo $question['metadata']['values']['a'] ?>
+					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['a'] ?>"> <?php echo $question['metadata']['values']['a'] ?>
 				    			</label>
 				    		</div>
 				    		<div class="checkbox">
 				    			<label>
-					    			<input type="radio" name="answer[]" value="<?php echo $question['metadata']['values']['b'] ?>"> <?php echo $question['metadata']['values']['b'] ?>
+					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['b'] ?>"> <?php echo $question['metadata']['values']['b'] ?>
 				    			</label>
 				    		</div>
 				    		<div class="checkbox">
 				    			<label>
-					    			<input type="radio" name="answer[]" value="<?php echo $question['metadata']['values']['c'] ?>"> <?php echo $question['metadata']['values']['c'] ?>
+					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['c'] ?>"> <?php echo $question['metadata']['values']['c'] ?>
 				    			</label>
 				    		</div>
 				    		<div class="checkbox">
 				    			<label>
-					    			<input type="radio" name="answer[]" value="<?php echo $question['metadata']['values']['d'] ?>"> <?php echo $question['metadata']['values']['d'] ?>
+					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['d'] ?>"> <?php echo $question['metadata']['values']['d'] ?>
 				    			</label>
 				    		</div>
 			    		</label>
