@@ -11,8 +11,8 @@ register:
   param: { module: profiles, action: register }
 
 confirm:
-  url:   confirm/:emailToken
-  param: { module: profiles, action: register }
+  url:   confirm/:email_token
+  param: { module: profiles, action: confirm }
 
 forConfirmation:
   url:   forConfirmation
