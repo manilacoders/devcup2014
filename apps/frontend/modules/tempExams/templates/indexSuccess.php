@@ -14,8 +14,7 @@
   <?php foreach ($lists as $list): ?>
   <tr>
     <td>
-      <a href="<?php echo url_for('tempExams/edit?exam_id='.$list['id']) ?>">Edit</a><br>
-      <a href="<?php echo url_for('tempDistribute/index?exam_id='.$list['id']) ?>">Distribute Exam</a>
+      <a href="<?php echo url_for('tempExams/edit?exam_id='.$list['id']) ?>">Edit</a>
     </td>
     <td><?php echo $list['name'] ?></td>
     <td><?php echo $list['created_at'] ?></td>

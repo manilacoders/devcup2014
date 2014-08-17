@@ -74,7 +74,7 @@ class tempQuestionsActions extends sfActions
       $exam = ExamTable::getInstance()->findOneById($post['id']);
       $exam
         ->setName($post['name'])
-        ->setProfileId($user->getAttribute('profile_id'))
+        ->setProfileId($user->getAttribute('user')['id'])
         ->save();
 
       $this->redirect('tempExams/index');

@@ -22,7 +22,7 @@ class tempExamsActions extends sfActions
     $exams = ExamTable::getInstance()->createQuery('e');
     $exams
       ->select('e.*, q.*, se.*, count(q.id) as q_count')
-      ->where('e.profile_id = ?', $user->getAttribute('profile_id'))
+      ->where('e.profile_id = ?', $user->getAttribute('user')['id'])
       ->leftJoin('e.questions q')
       ->groupBy('q.exam_id')
       ->orderBy('created_at DESC');
@@ -39,7 +39,7 @@ class tempExamsActions extends sfActions
       $exam = new Exam;
       $exam
         ->setName($post['name'])
-        ->setProfileId($user->getAttribute('profile_id'))
+        ->setProfileId($user->getAttribute('user')['id'])
         ->save();
 
       $this->redirect('tempExams/index');
@@ -55,7 +55,7 @@ class tempExamsActions extends sfActions
       $exam = ExamTable::getInstance()->findOneById($post['id']);
       $exam
         ->setName($post['name'])
-        ->setProfileId($user->getAttribute('profile_id'))
+        ->setProfileId($user->getAttribute('user')['id'])
         ->save();
 
       $this->redirect('tempExams/index');

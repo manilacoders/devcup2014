@@ -108,14 +108,54 @@ Exam:
     end_at: 2014-08-31 20:00:00
     subject_id: 1
   exam_2:
-    name: Exam 1 for Teacher Daison
+    name: Exam 2 for Teacher Daison
     profile_id: 1
     active_at: 2014-08-01 01:00:00
     end_at: 2014-08-31 20:00:00
     subject_id: 2
   exam_3:
-    name: Exam 1 for Teacher Daison
+    name: Exam 3 for Teacher Daison
     profile_id: 1
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 3
+
+
+  exam_4:
+    name: Exam 1 for Teacher Kenn
+    profile_id: 2
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 1
+  exam_5:
+    name: Exam 2 for Teacher Kenn
+    profile_id: 2
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 2
+  exam_6:
+    name: Exam 3 for Teacher Kenn
+    profile_id: 2
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 3
+
+
+  exam_7:
+    name: Exam 1 for Teacher Phillip
+    profile_id: 3
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 1
+  exam_8:
+    name: Exam 2 for Teacher Phillip
+    profile_id: 3
+    active_at: 2014-08-01 01:00:00
+    end_at: 2014-08-31 20:00:00
+    subject_id: 2
+  exam_9:
+    name: Exam 3 for Teacher Phillip
+    profile_id: 3
     active_at: 2014-08-01 01:00:00
     end_at: 2014-08-31 20:00:00
     subject_id: 3
