@@ -61,6 +61,38 @@ class tempReportsActions extends sfActions
       }
     }
 
+    $arr_labels = array();
+    $arr_data = array();
+    $arr_data_two = array();
+    foreach ($exam_results as $name => $result) {
+      $arr_labels[] = $name;
+      $arr_data[] = $result['passed'];
+      $arr_data_two[] = $result['failed'];
+    }
+
+    $data = [
+      'labels' => $arr_labels,
+      'datasets' => [
+        [
+          'label' => "",
+          'fillColor' => "rgba(220,220,220,0.5)",
+          'strokeColor' => "rgba(220,220,220,0.8)",
+          'highlightFill' => "rgba(220,220,220,0.75)",
+          'highlightStroke' => "rgba(220,220,220,1)",
+          'data' => $arr_data,
+        ],
+        [
+          'label' => "My Second dataset",
+          'fillColor' => "rgba(151,187,205,0.5)",
+          'strokeColor' => "rgba(151,187,205,0.8)",
+          'highlightFill' => "rgba(151,187,205,0.75)",
+          'highlightStroke' => "rgba(151,187,205,1)",
+          'data' => $arr_data_two
+        ]
+      ]
+    ];
+
+    $this->data = json_encode($data);
     $this->exams = $exam_results;
   }
 

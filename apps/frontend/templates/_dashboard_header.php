@@ -7,7 +7,7 @@
 		<li <?php if ($current_section == 'student') echo 'class="active"'?>>
       <a href="<?php echo url_for("students/index") ?>">Students</a>
     </li>
-    <li id="reports">
+    <li id="reports" <?php if ($current_section == 'reports') echo 'class="active"'?>>
 			<a href="#">Reports</a>
 				<ul class="nav nav-pill nav-stacked sub-menu">
 					<li>
