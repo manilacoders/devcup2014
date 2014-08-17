@@ -12,8 +12,7 @@ $(function() {
 			},
 		})
 		.done(function(html) {
-			$('#main-panel div, form').remove();
-			$('#main-panel').append(html);
+			$('#main-panel').empty().append(html);
 		});
 		
 	});
