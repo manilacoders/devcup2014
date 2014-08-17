@@ -10,13 +10,14 @@
  */
 class tempReportsActions extends sfActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
+  public function executeIndex(sfWebRequest $request)
+  {
+    $this->setLayout('dashboard');
+  }
+
   public function executeExamResults(sfWebRequest $request)
   {
+    $this->setLayout('dashboard');
     $user = $this->getUser();
     
     $teacher = ProfileTable::getInstance();
@@ -65,6 +66,7 @@ class tempReportsActions extends sfActions
 
   public function executeQuestionResults(sfWebRequest $request)
   {
+    $this->setLayout('dashboard');
     $user = $this->getUser();
     
     $exam_id = $request->getParameter('exam_id');
@@ -109,6 +111,7 @@ class tempReportsActions extends sfActions
 
   public function executeStudents(sfWebRequest $request)
   {
+    $this->setLayout('dashboard');
     $user = $this->getUser();
 
     $teacher = ProfileTable::getInstance()->findOneById($user->getAttribute('user')['id']);
@@ -123,6 +126,7 @@ class tempReportsActions extends sfActions
 
   public function executeStudentStat(sfWebRequest $request)
   {
+    $this->setLayout('dashboard');
     $user = $this->getUser();
     $student = StudentTable::getInstance()->findOnebyId($request->getParameter('student_id'));
     if ($student == false) {
@@ -160,7 +164,9 @@ class tempReportsActions extends sfActions
     foreach ($arr as $a) {
       @$overall_total += $a['total'];
     }
-    $overall_total = $overall_total / count($arr);
+    if ($overall_total != 0) {
+      $overall_total = $overall_total / count($arr);
+    }
 
     $arr['Overall Total'] = array(
       'total' => $overall_total,
