@@ -6,7 +6,7 @@
 	    </a>
 	  </li>
 	  <li class="active">
-	    <a href="#" data-target-page="new">
+	    <a href="#" data-target-page="subject">
 	      Subjects
 	    </a>
 	  </li>

@@ -32,6 +32,10 @@ class examinationActions extends sfActions
 				return $this->renderPartial('examination/monitoring');
 				break;
 
+			case 'subject':
+				return $this->renderPartial('examination/subject');
+				break;
+
 			case 'manage':
 				return $this->renderPartial('examination/manage');
 				break;
