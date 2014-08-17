@@ -1,4 +1,4 @@
-<h1>Question Successfully added.</h1>
+<h5>Subject has been Added.</h5>
 <div class="help-block">Please wait...</div>
 
 <?php slot('page_js') ?>

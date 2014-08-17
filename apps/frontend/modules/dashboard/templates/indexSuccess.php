@@ -32,3 +32,13 @@
 
 <div class="col-md-10" id="main-panel">
 </div>
+
+<?php slot('page_js') ?>
+<script>
+	$(function() {
+		setTimeout(function(){
+			$('.alert.alert-success').fadeOut()
+		}, 2000);
+	});
+</script>
+<?php end_slot() ?>
