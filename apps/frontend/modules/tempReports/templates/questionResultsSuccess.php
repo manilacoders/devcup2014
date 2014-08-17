@@ -1,3 +1,4 @@
+<?php slot('current_section', 'reports') ?>
 
 <div class="col-md-8 col-md-offset-2">
   <a href="<?php echo url_for('tempReports/examResults') ?>" class="btn btn-xsm">Go Back</a><br>
