@@ -1,4 +1,4 @@
-<form action="" method="POST" class="form-horizontal" role="form">
+<form action="examination/createNew" method="POST" class="form-horizontal" role="form">
 	<div class="create-new">
 		<div class="row">
 			<legend>Exam Details</legend>
@@ -7,7 +7,7 @@
 					<div class="form-group">
 						<label class="control-label col-md-2">Exam Name</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" placeholder="Exam Name">
+							<input type="text" class="form-control" placeholder="Exam Name" name="exam_name">
 						</div>
 					</div>
 					
@@ -28,7 +28,7 @@
 					<div class="form-group">
 						<label class="control-label col-md-2">Subject</label>
 						<div class="col-md-6">
-							<select name="subject" class="form-control">
+							<select name="subject_id" class="form-control">
 								<option value="">-- Select Subject --</option>
 								<?php foreach ($subjects as $subject): ?>
 									<option value="<?php echo $subject['id'] ?>"><?php echo $subject['name'] ?></option>
@@ -55,7 +55,7 @@
 							<a href="#" class="btn btn-primary" id="question-type">Add Question</a>
 						</div>
 						<div class="btn-group">
-							<a href="#" class="btn btn-success pull-right">Create New Exam</a>
+							<button type="submit" class="btn btn-success">Save Exam</button>
 						</div>
 					</div>
 				</div>
@@ -65,22 +65,22 @@
 </form>
 
 <script>
-	$(function() {
-		$('#main-panel').on('click', ' #question-type', function(e) {
-			e.preventDefault();
-			var qtype = $(this).data('question-type');
-			$.ajax({
-				url: '/examination/getQuestionTemplate',
-				type: 'POST',
-				dataType: 'html',
-				data: {
-					temp: 'multiple'
-				},
-			})
-			.done(function(html) {
-				$('#generated-questions').append(html);
-			});
-		});
+	var question_index = 0;
+
+	$('#main-panel').on('click', ' #question-type', function(e) {
+		e.preventDefault();
+		var qtype = $(this).data('question-type');
+		$.ajax({
+			url: '<?php echo url_for("examination/getQuestionTemplate?question_index=") ?>' + question_index,
+			type: 'POST',
+			dataType: 'html',
+			data: {
+				temp: 'multiple'
+			},
+		})
+		.done(function(html) {
+			$('#generated-questions').append(html);
+			question_index++;
 		$('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 	});
 </script>

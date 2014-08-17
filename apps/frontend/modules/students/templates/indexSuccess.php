@@ -1,3 +1,5 @@
+<?php slot('current_section', 'students') ?>
+
 <div class="row">
   <div class="col-md-12">
     <?php if ($sf_user->hasFlash('error_head')): ?>

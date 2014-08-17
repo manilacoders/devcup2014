@@ -10,14 +10,54 @@
  */
 class examinationActions extends sfActions
 {
+
  /**
   * Executes index action
   *
   * @param sfRequest $request A request object
   */
-  public function executeNewExam(sfWebRequest $request)
+  public function executeCreateNew(sfWebRequest $request)
   {
-    // $this->forward('default', 'module');
+    $user = $this->getUser();
+    $profileId = $user->getAttribute('user')->getId();
+
+    $post = $this->request->getPostParameters();
+
+    if ($request->isMethod(sfRequest::POST)) {
+
+      try {
+        Doctrine_Manager::connection()->beginTransaction();
+       
+        $exam = ExamTable::getInstance()->findOneByNameAndProfileId($post['exam_name'], $profileId);
+        if ($exam) {
+          throw new Exception("Examination Name is already exist.");
+        }
+
+        $exam = new Exam;
+        $exam
+          ->setName($post['exam_name'])
+          ->setProfileId($profileId)
+          ->setActiveAt(date('Y-m-d H:i:s', strtotime($post['active_at'])))
+          ->setEndAt(date('Y-m-d H:i:s', strtotime($post['end_at'])))
+          ->setSubjectId($post['subject_id'])
+          ->save();
+
+        foreach ($post['questions'] as $question) {
+          $new_question = new Question;
+          $new_question
+            ->setQuestion($question['question'])
+            ->setMetadata(array('values' => $question['choices']))
+            ->setAnswer($question['answer'])
+            ->setExam($exam)
+            ->save();
+        }
+        
+        Doctrine_Manager::connection()->commit();
+      } catch (Exception $e) {
+        Doctrine_Manager::connection()->rollback();
+        throw $e;
+      }
+    }
   }
 
   public function executeGetPage(sfWebRequest $request)
@@ -73,6 +113,7 @@ class examinationActions extends sfActions
   public function executeGetQuestionTemplate(sfWebRequest $request)
   {
   	$temp = $request->getParameter('temp');
+    $this->question_index = $request->getParameter('question_index');
 
 		switch ($temp) {
 			case 'multiple':
