@@ -12,6 +12,8 @@ class computeAction extends sfActions
    **/
   public function execute($request)
   {
+    $this->setLayout('student');
+
     $user = $this->getUser();
     $studentId = $user->getAttribute('user')->getId();
 
@@ -59,6 +61,8 @@ class computeAction extends sfActions
           ->save();
        
         Doctrine_Manager::connection()->commit();
+        $this->exam_result = $exam_result->toArray();
+
       } catch (Exception $e) {
         Doctrine_Manager::connection()->rollback();
         throw $e;
