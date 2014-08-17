@@ -37,6 +37,7 @@
     <!-- Bootstrap JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
+    <script src="/js/chart.min.js"></script>
     <?php include_slot('page_js') ?>
   </body>
 </html>
