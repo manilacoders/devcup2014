@@ -51,6 +51,9 @@ class examinationActions extends sfActions
             ->setExam($exam)
             ->save();
         }
+
+        $this->getUser()->setFlash('success', 'Exam and Questions successfully added!');
+        $this->redirect('@dashboard');
         
         Doctrine_Manager::connection()->commit();
       } catch (Exception $e) {
