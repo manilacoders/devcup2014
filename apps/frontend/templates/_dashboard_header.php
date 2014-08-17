@@ -11,4 +11,9 @@
 			<a href="<?php echo url_for("reports/index") ?>">Reports</a>
 		</li>
 	</ul>
+	<ul class="nav navbar-nav pull-right">
+		<li>
+			<a href="<?php echo url_for("@dashboard") ?>">Log Out</a>
+		</li>
+	</ul>
 </nav>
