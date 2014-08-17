@@ -8,3 +8,5 @@ all:
 
   email:
     sender: devcup2014noreply@gmail.com
+
+  confirmation_url: 'http://guro.dev:8080/confirm'
