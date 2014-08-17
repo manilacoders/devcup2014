@@ -1,3 +1,5 @@
+<?php slot('current_section', 'reports') ?>
+
 <div class="col-md-6">
   <table class="table table-bordered">
     <tr>

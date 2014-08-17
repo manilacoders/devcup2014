@@ -1,3 +1,4 @@
+<?php slot('current_section', 'reports') ?>
 
 <div class="col-md-8 col-md-offset-2">
   <h4>Exam Results</h4>
