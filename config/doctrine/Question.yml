@@ -5,10 +5,14 @@ Exam:
     profile_id: integer
     active_at: timestamp
     end_at: timestamp
+    subject_id: integer
 
   relations:
     Profile:
       alias: profile
+      foreignAlias: exams
+    Subject: 
+      alias: subject
       foreignAlias: exams
 
   actAs:

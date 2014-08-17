@@ -1,0 +1,17 @@
+Subject:
+  tableName: 'subjects'
+  columns: 
+    name: string(50)
+    profile_id: integer
+
+  indexes:
+    name: 
+      fields: [name]
+
+  relations:
+    Profile: 
+      alias: profile
+      foreignAlias: subject
+
+  actAs:
+    - Timestampable

@@ -9,7 +9,9 @@
  * @property integer $profile_id
  * @property timestamp $active_at
  * @property timestamp $end_at
+ * @property integer $subject_id
  * @property Profile $profile
+ * @property Subject $subject
  * @property Doctrine_Collection $exam_results
  * @property Doctrine_Collection $questions
  * 
@@ -17,14 +19,18 @@
  * @method integer             getProfileId()    Returns the current record's "profile_id" value
  * @method timestamp           getActiveAt()     Returns the current record's "active_at" value
  * @method timestamp           getEndAt()        Returns the current record's "end_at" value
+ * @method integer             getSubjectId()    Returns the current record's "subject_id" value
  * @method Profile             getProfile()      Returns the current record's "profile" value
+ * @method Subject             getSubject()      Returns the current record's "subject" value
  * @method Doctrine_Collection getExamResults()  Returns the current record's "exam_results" collection
  * @method Doctrine_Collection getQuestions()    Returns the current record's "questions" collection
  * @method Exam                setName()         Sets the current record's "name" value
  * @method Exam                setProfileId()    Sets the current record's "profile_id" value
  * @method Exam                setActiveAt()     Sets the current record's "active_at" value
  * @method Exam                setEndAt()        Sets the current record's "end_at" value
+ * @method Exam                setSubjectId()    Sets the current record's "subject_id" value
  * @method Exam                setProfile()      Sets the current record's "profile" value
+ * @method Exam                setSubject()      Sets the current record's "subject" value
  * @method Exam                setExamResults()  Sets the current record's "exam_results" collection
  * @method Exam                setQuestions()    Sets the current record's "questions" collection
  * 
@@ -51,6 +57,9 @@ abstract class BaseExam extends sfDoctrineRecord
         $this->hasColumn('end_at', 'timestamp', null, array(
              'type' => 'timestamp',
              ));
+        $this->hasColumn('subject_id', 'integer', null, array(
+             'type' => 'integer',
+             ));
     }
 
     public function setUp()
@@ -58,6 +67,10 @@ abstract class BaseExam extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Profile as profile', array(
              'local' => 'profile_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('Subject as subject', array(
+             'local' => 'subject_id',
              'foreign' => 'id'));
 
         $this->hasMany('ExamResult as exam_results', array(
