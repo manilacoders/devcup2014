@@ -11,30 +11,21 @@
     			<?php echo $question['question'] ?>
   				</h3>
   		  </div>
+
+        <?php 
+        $choices = $question['metadata']['values'];
+        ?>
   		  <div class="panel-body">
 			    <div class="form-group">
 			    	<div class="radio">
 			    		<label>
-				    		<div class="checkbox">
-				    			<label>
-					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['a'] ?>"> <?php echo $question['metadata']['values']['a'] ?>
-				    			</label>
-				    		</div>
-				    		<div class="checkbox">
-				    			<label>
-					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['b'] ?>"> <?php echo $question['metadata']['values']['b'] ?>
-				    			</label>
-				    		</div>
-				    		<div class="checkbox">
-				    			<label>
-					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['c'] ?>"> <?php echo $question['metadata']['values']['c'] ?>
-				    			</label>
-				    		</div>
-				    		<div class="checkbox">
-				    			<label>
-					    			<input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $question['metadata']['values']['d'] ?>"> <?php echo $question['metadata']['values']['d'] ?>
-				    			</label>
-				    		</div>
+                <?php foreach ($choices as $key => $value): ?>
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio" name="answers[<?php echo $question['id'] ?>]" value="<?php echo $key ?>"> <?php echo $value ?>
+                    </label>
+                  </div>
+                <?php endforeach ?>
 			    		</label>
 			    	</div>
 			    </div>
