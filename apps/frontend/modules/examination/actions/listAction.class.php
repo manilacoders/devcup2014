@@ -15,5 +15,10 @@ class listAction extends sfActions
   public function execute($request)
   {
   	$this->setLayout('student');
+
+  	$subjects = SubjectTable::getInstance()->findAll();
+
+  	$this->subjects = $subjects;
+
   }
 }
