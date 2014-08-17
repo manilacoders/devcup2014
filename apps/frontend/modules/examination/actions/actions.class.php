@@ -46,7 +46,7 @@ class examinationActions extends sfActions
           $new_question = new Question;
           $new_question
             ->setQuestion($question['question'])
-            ->setMetadata(array('values' => $question['values']))
+            ->setMetadata(array('values' => $question['choices']))
             ->setAnswer($question['answer'])
             ->setExam($exam)
             ->save();
