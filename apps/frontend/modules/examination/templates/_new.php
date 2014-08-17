@@ -65,22 +65,25 @@
 </form>
 
 <script>
-	var question_index = 0;
+	$(function() {
+		var question_index = 0;
 
-	$('#main-panel').on('click', ' #question-type', function(e) {
-		e.preventDefault();
-		var qtype = $(this).data('question-type');
-		$.ajax({
-			url: '<?php echo url_for("examination/getQuestionTemplate?question_index=") ?>' + question_index,
-			type: 'POST',
-			dataType: 'html',
-			data: {
-				temp: 'multiple'
-			},
-		})
-		.done(function(html) {
-			$('#generated-questions').append(html);
-			question_index++;
+		$('#main-panel').on('click', ' #question-type', function(e) {
+			e.preventDefault();
+			var qtype = $(this).data('question-type');
+			$.ajax({
+				url: '<?php echo url_for("examination/getQuestionTemplate?question_index=") ?>' + question_index,
+				type: 'POST',
+				dataType: 'html',
+				data: {
+					temp: 'multiple'
+				},
+			})
+			.done(function(html) {
+				$('#generated-questions').append(html);
+				question_index++;
+			});
+		});
 		$('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 	});
 </script>
