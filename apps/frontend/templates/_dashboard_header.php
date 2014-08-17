@@ -5,7 +5,7 @@
 			<a href="<?php echo url_for("@dashboard") ?>">Examinations</a>
 		</li>
 		<li <?php if ($current_section == 'student') echo 'class="active"'?>>
-      <a href="#">Students</a>
+      <a href="<?php echo url_for("students/index") ?>">Students</a>
     </li>
     <li>
 			<a href="<?php echo url_for("tempReports/index") ?>">Reports</a>
@@ -13,7 +13,7 @@
 	</ul>
 	<ul class="nav navbar-nav pull-right">
 		<li>
-			<a href="<?php echo url_for("@dashboard") ?>">Log Out</a>
+			<a href="<?php echo url_for("@logout") ?>">Log Out</a>
 		</li>
 	</ul>
 </nav>
