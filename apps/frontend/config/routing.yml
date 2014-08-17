@@ -27,6 +27,14 @@ dashboard:
   url:   /dashboard
   param: { module: dashboard, action: index }
 
+students:
+  url:   /dashboard/students
+  param: { module: students, action: index }
+
+reports:
+  url:   /dashboard/reports
+  param: { module: reports, action: index }
+
 # generic rules
 # please, remove them by adding more specific rules
 # default_index:
