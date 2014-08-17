@@ -1,7 +1,7 @@
 Answer:
   tableName: 'answers'
   columns:
-    profile_id: integer
+    student_id: integer
     question_id: integer
     answer: string(50)
 
@@ -10,9 +10,9 @@ Answer:
       fields: [answer]
 
   relations:
-    # Profile:
-    #   alias: profile
-    #   foreignAlias: profile_id
+    Student:
+      alias: student
+      foreignAlias: answers
     Question:
       alias: question
       foreignAlias: question_id

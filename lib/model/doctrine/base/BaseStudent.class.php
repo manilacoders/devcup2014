@@ -13,6 +13,7 @@
  * @property integer $section_id
  * @property boolean $is_active
  * @property Doctrine_Collection $sections
+ * @property Doctrine_Collection $answers
  * @property Doctrine_Collection $exam_results
  * 
  * @method varchar             getFirstName()    Returns the current record's "first_name" value
@@ -23,6 +24,7 @@
  * @method integer             getSectionId()    Returns the current record's "section_id" value
  * @method boolean             getIsActive()     Returns the current record's "is_active" value
  * @method Doctrine_Collection getSections()     Returns the current record's "sections" collection
+ * @method Doctrine_Collection getAnswers()      Returns the current record's "answers" collection
  * @method Doctrine_Collection getExamResults()  Returns the current record's "exam_results" collection
  * @method Student             setFirstName()    Sets the current record's "first_name" value
  * @method Student             setMiddleName()   Sets the current record's "middle_name" value
@@ -32,6 +34,7 @@
  * @method Student             setSectionId()    Sets the current record's "section_id" value
  * @method Student             setIsActive()     Sets the current record's "is_active" value
  * @method Student             setSections()     Sets the current record's "sections" collection
+ * @method Student             setAnswers()      Sets the current record's "answers" collection
  * @method Student             setExamResults()  Sets the current record's "exam_results" collection
  * 
  * @package    devcup2014
@@ -111,6 +114,10 @@ abstract class BaseStudent extends sfDoctrineRecord
              'refClass' => 'StudentSection',
              'local' => 'student_id',
              'foreign' => 'section_id'));
+
+        $this->hasMany('Answer as answers', array(
+             'local' => 'id',
+             'foreign' => 'student_id'));
 
         $this->hasMany('ExamResult as exam_results', array(
              'local' => 'id',

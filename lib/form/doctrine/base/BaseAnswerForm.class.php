@@ -16,7 +16,7 @@ abstract class BaseAnswerForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
-      'profile_id'  => new sfWidgetFormInputText(),
+      'student_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('student'), 'add_empty' => true)),
       'question_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('question'), 'add_empty' => true)),
       'answer'      => new sfWidgetFormInputText(),
       'created_at'  => new sfWidgetFormDateTime(),
@@ -25,7 +25,7 @@ abstract class BaseAnswerForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'profile_id'  => new sfValidatorInteger(array('required' => false)),
+      'student_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('student'), 'required' => false)),
       'question_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('question'), 'required' => false)),
       'answer'      => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'created_at'  => new sfValidatorDateTime(),
