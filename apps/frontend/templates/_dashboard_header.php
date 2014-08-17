@@ -8,7 +8,7 @@
       <a href="#">Students</a>
     </li>
     <li>
-			<a href="#">Reports</a>
+			<a href="<?php echo url_for("reports/index") ?>">Reports</a>
 		</li>
 	</ul>
 </nav>

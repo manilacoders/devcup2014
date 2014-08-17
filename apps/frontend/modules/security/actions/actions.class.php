@@ -27,7 +27,6 @@ class securityActions extends sfActions
         }
         $group = 'student';
       }
-      $group = 'student';
 
       if ($user->getPassword() == self::_hashPassword($password)) {
         $this->getUser()->setAuthenticated(true);
