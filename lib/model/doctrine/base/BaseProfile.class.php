@@ -17,6 +17,7 @@
  * @property Section $section
  * @property Doctrine_Collection $profile_id
  * @property Doctrine_Collection $exams
+ * @property Doctrine_Collection $subject
  * 
  * @method varchar             getType()        Returns the current record's "type" value
  * @method varchar             getFirstName()   Returns the current record's "first_name" value
@@ -30,6 +31,7 @@
  * @method Section             getSection()     Returns the current record's "section" value
  * @method Doctrine_Collection getProfileId()   Returns the current record's "profile_id" collection
  * @method Doctrine_Collection getExams()       Returns the current record's "exams" collection
+ * @method Doctrine_Collection getSubject()     Returns the current record's "subject" collection
  * @method Profile             setType()        Sets the current record's "type" value
  * @method Profile             setFirstName()   Sets the current record's "first_name" value
  * @method Profile             setMiddleName()  Sets the current record's "middle_name" value
@@ -42,6 +44,7 @@
  * @method Profile             setSection()     Sets the current record's "section" value
  * @method Profile             setProfileId()   Sets the current record's "profile_id" collection
  * @method Profile             setExams()       Sets the current record's "exams" collection
+ * @method Profile             setSubject()     Sets the current record's "subject" collection
  * 
  * @package    devcup2014
  * @subpackage model
@@ -145,6 +148,10 @@ abstract class BaseProfile extends sfDoctrineRecord
              'foreign' => 'profile_id'));
 
         $this->hasMany('Exam as exams', array(
+             'local' => 'id',
+             'foreign' => 'profile_id'));
+
+        $this->hasMany('Subject as subject', array(
              'local' => 'id',
              'foreign' => 'profile_id'));
 
