@@ -10,20 +10,23 @@
  * @property timestamp $active_at
  * @property timestamp $end_at
  * @property Profile $profile
+ * @property Doctrine_Collection $exam_results
  * @property Doctrine_Collection $questions
  * 
- * @method string              getName()       Returns the current record's "name" value
- * @method integer             getProfileId()  Returns the current record's "profile_id" value
- * @method timestamp           getActiveAt()   Returns the current record's "active_at" value
- * @method timestamp           getEndAt()      Returns the current record's "end_at" value
- * @method Profile             getProfile()    Returns the current record's "profile" value
- * @method Doctrine_Collection getQuestions()  Returns the current record's "questions" collection
- * @method Exam                setName()       Sets the current record's "name" value
- * @method Exam                setProfileId()  Sets the current record's "profile_id" value
- * @method Exam                setActiveAt()   Sets the current record's "active_at" value
- * @method Exam                setEndAt()      Sets the current record's "end_at" value
- * @method Exam                setProfile()    Sets the current record's "profile" value
- * @method Exam                setQuestions()  Sets the current record's "questions" collection
+ * @method string              getName()         Returns the current record's "name" value
+ * @method integer             getProfileId()    Returns the current record's "profile_id" value
+ * @method timestamp           getActiveAt()     Returns the current record's "active_at" value
+ * @method timestamp           getEndAt()        Returns the current record's "end_at" value
+ * @method Profile             getProfile()      Returns the current record's "profile" value
+ * @method Doctrine_Collection getExamResults()  Returns the current record's "exam_results" collection
+ * @method Doctrine_Collection getQuestions()    Returns the current record's "questions" collection
+ * @method Exam                setName()         Sets the current record's "name" value
+ * @method Exam                setProfileId()    Sets the current record's "profile_id" value
+ * @method Exam                setActiveAt()     Sets the current record's "active_at" value
+ * @method Exam                setEndAt()        Sets the current record's "end_at" value
+ * @method Exam                setProfile()      Sets the current record's "profile" value
+ * @method Exam                setExamResults()  Sets the current record's "exam_results" collection
+ * @method Exam                setQuestions()    Sets the current record's "questions" collection
  * 
  * @package    devcup2014
  * @subpackage model
@@ -56,6 +59,10 @@ abstract class BaseExam extends sfDoctrineRecord
         $this->hasOne('Profile as profile', array(
              'local' => 'profile_id',
              'foreign' => 'id'));
+
+        $this->hasMany('ExamResult as exam_results', array(
+             'local' => 'id',
+             'foreign' => 'exam_id'));
 
         $this->hasMany('Question as questions', array(
              'local' => 'id',
