@@ -10,9 +10,9 @@ Answer:
       fields: [answer]
 
   relations:
-    Profile:
-      alias: profile
-      foreignAlias: profile_id
+    # Profile:
+    #   alias: profile
+    #   foreignAlias: profile_id
     Question:
       alias: question
       foreignAlias: question_id

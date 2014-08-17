@@ -8,18 +8,15 @@
  * @property integer $profile_id
  * @property integer $question_id
  * @property string $answer
- * @property Profile $profile
  * @property Question $question
  * 
  * @method integer  getProfileId()   Returns the current record's "profile_id" value
  * @method integer  getQuestionId()  Returns the current record's "question_id" value
  * @method string   getAnswer()      Returns the current record's "answer" value
- * @method Profile  getProfile()     Returns the current record's "profile" value
  * @method Question getQuestion()    Returns the current record's "question" value
  * @method Answer   setProfileId()   Sets the current record's "profile_id" value
  * @method Answer   setQuestionId()  Sets the current record's "question_id" value
  * @method Answer   setAnswer()      Sets the current record's "answer" value
- * @method Answer   setProfile()     Sets the current record's "profile" value
  * @method Answer   setQuestion()    Sets the current record's "question" value
  * 
  * @package    devcup2014
@@ -55,10 +52,6 @@ abstract class BaseAnswer extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Profile as profile', array(
-             'local' => 'profile_id',
-             'foreign' => 'id'));
-
         $this->hasOne('Question as question', array(
              'local' => 'question_id',
              'foreign' => 'id'));
