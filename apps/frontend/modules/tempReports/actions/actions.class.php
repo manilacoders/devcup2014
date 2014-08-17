@@ -138,6 +138,39 @@ class tempReportsActions extends sfActions
       }
     }
 
+    $arr_labels = array();
+    $arr_data = array();
+    $arr_data_two = array();
+    foreach ($question_results as $name => $result) {
+      $arr_labels[] = $result['name'];
+      $arr_data[] = $result['passed'];
+      $arr_data_two[] = $result['failed'];
+    }
+
+    $data = [
+      'labels' => $arr_labels,
+      'datasets' => [
+        [
+          'label' => "",
+          'fillColor' => "rgba(220,220,220,0.5)",
+          'strokeColor' => "rgba(220,220,220,0.8)",
+          'highlightFill' => "rgba(220,220,220,0.75)",
+          'highlightStroke' => "rgba(220,220,220,1)",
+          'data' => $arr_data,
+        ],
+        [
+          'label' => "",
+          'fillColor' => "rgba(220,220,220,0.5)",
+          'strokeColor' => "rgba(220,220,220,0.8)",
+          'highlightFill' => "rgba(220,220,220,0.75)",
+          'highlightStroke' => "rgba(220,220,220,1)",
+          'data' => $arr_data_two,
+        ],
+      ]
+    ];
+
+    $this->data = json_encode($data);
+
     $this->questions = $question_results;
   }
 
@@ -203,6 +236,30 @@ class tempReportsActions extends sfActions
     $arr['Overall Total'] = array(
       'total' => $overall_total,
     );  
+
+    $arr_labels = array();
+    $arr_data = array();
+    $arr_data_two = array();
+    foreach ($arr as $name => $result) {
+      $arr_labels[] = $name;
+      $arr_data[] = $result['total'];
+    }
+
+    $data = [
+      'labels' => $arr_labels,
+      'datasets' => [
+        [
+          'label' => "",
+          'fillColor' => "rgba(220,220,220,0.5)",
+          'strokeColor' => "rgba(220,220,220,0.8)",
+          'highlightFill' => "rgba(220,220,220,0.75)",
+          'highlightStroke' => "rgba(220,220,220,1)",
+          'data' => $arr_data,
+        ],
+      ]
+    ];
+
+    $this->data = json_encode($data);
 
     $this->subjects = $arr;
 
