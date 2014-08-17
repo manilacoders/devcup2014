@@ -72,7 +72,7 @@
 		e.preventDefault();
 		var qtype = $(this).data('question-type');
 		$.ajax({
-			url: '/examination/getQuestionTemplate?question_index=' + question_index,
+			url: '<?php echo url_for("examination/getQuestionTemplate?question_index=") ?>' + question_index,
 			type: 'POST',
 			dataType: 'html',
 			data: {
