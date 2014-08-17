@@ -46,5 +46,22 @@ class subjectsActions extends sfActions
       Doctrine_Manager::connection()->rollback();
       throw $e;
     }
+
+  }
+
+ /**
+  * Executes index action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeList(sfWebRequest $request)
+  {
+    $this->setLayout('student');
+    $id = $request->getParameter('id');
+
+    $subject = SubjectTable::getInstance()->findOneById($id);
+    $exams = $subject->getExams();
+
+    $this->exams = $exams->toArray();
   }
 }
