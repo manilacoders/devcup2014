@@ -14,12 +14,25 @@ class startAction extends sfActions
    **/
   public function execute($request)
   {
-  	$this->setLayout('student');
+    $this->setLayout('student');
 
-    $exam_id = $request->getParameter('exam_id');
+    $id = $request->getParameter('exam_id');
+    if (! $id) {
+      throw new Exception("Invalid Questionnaire ID.");
+    }
+
+    $exam = ExamTable::getInstance()->findOneById($id);
+    if (! $exam) {
+      throw new Exception("Questionnaire not found.");
+    }
+
+    $this->exam = $exam->toArray();
+
+    $questions = $exam->getQuestions();
 
     $questions = array(
       array(
+        'id' => 1,
         'question' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         'metadata' => array(
           'values' => array(
@@ -31,6 +44,7 @@ class startAction extends sfActions
         ),
       ),
       array(
+        'id' => 2,
         'question' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         'metadata' => array(
           'values' => array(
@@ -42,8 +56,6 @@ class startAction extends sfActions
         ),
       ),
     );
-
-    $this->exam_name = $exam_id;
 
   	$this->questions = $questions;
   }

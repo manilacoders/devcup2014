@@ -20,7 +20,7 @@
 						<?php echo $exam['name'] ?>
 					</td>
 					<td>
-						<?php echo $exam['profile']['name'] ?>
+						<?php echo ucwords($teacher['first_name'] . ' ' . $teacher['last_name']) ?>
 					</td>
 					<td>
 						<?php echo date('Y-m-d g:i a', strtotime($exam['active_at'])) ?>

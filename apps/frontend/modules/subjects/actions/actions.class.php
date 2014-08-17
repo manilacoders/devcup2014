@@ -54,14 +54,18 @@ class subjectsActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
-  public function executeList(sfWebRequest $request)
+  public function executeListExams(sfWebRequest $request)
   {
     $this->setLayout('student');
     $id = $request->getParameter('id');
 
     $subject = SubjectTable::getInstance()->findOneById($id);
+
+    $this->teacher = $subject->getProfile()->toArray();
+
     $exams = $subject->getExams();
 
     $this->exams = $exams->toArray();
+
   }
 }

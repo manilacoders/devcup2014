@@ -18,7 +18,7 @@
 		<ul class="list-group">
 		<?php foreach ($subjects as $subj): ?>
 			<li class="list-group-item">
-				<a href="<?php echo url_for('subjects/list?id=' . $subj['id']) ?>"><?php echo $subj['name'] ?></a>
+				<a href="<?php echo url_for('subjects/listExams?id=' . $subj['id']) ?>"><?php echo $subj['name'] ?></a>
 			</li>
 		<?php endforeach ?>
 		</ul>
