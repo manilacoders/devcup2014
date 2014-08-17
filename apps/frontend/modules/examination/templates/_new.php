@@ -20,17 +20,20 @@
 		</div>
 
 	</div>
+</form>
+
+<form action="" method="POST" class="form-horizontal" role="form">
 	<div class="question hide">
 		<div class="row">
 			<div class="col-md-12">
-				<legend>Add a Question</legend>
-				<div class="btn-group btn-group-justified" id="question-type">
-				  <div class="btn-group">
-				    <a href="#" class="btn btn-default type" data-question-type="multiple">Multiple Choice</a>
-				  </div>
-				  <div class="btn-group">
-				    <a href="#" class="btn btn-default type" data-question-type="essay">Essay Type</a>
-				  </div>
+				<legend>
+					Question
+				</legend>
+				<div class="btn-group">
+					<a href="#" class="btn btn-primary" id="question-type">Add Question</a>
+				</div>
+				<div class="btn-group">
+					<a href="#" class="btn btn-success pull-right">Done</a>
 				</div>
 			</div>
 		</div>
@@ -40,14 +43,19 @@
 </form>
 
 <script>
-	$('#main-panel #question-type').on('click', '.type', function(e) {
+	$('#main-panel').on('click', ' #question-type', function(e) {
 		e.preventDefault();
 		var qtype = $(this).data('question-type');
-		if (qtype == 'multiple') {
-			$('#generated-questions').append('multiple');
-		};
-		if (qtype == 'essay') {
-			$('#generated-questions').append('essay');
-		};
+		$.ajax({
+			url: '/examination/getQuestionTemplate',
+			type: 'POST',
+			dataType: 'html',
+			data: {
+				temp: 'multiple'
+			},
+		})
+		.done(function(html) {
+			$('#generated-questions').append(html);
+		});
 	});
 </script>

@@ -46,4 +46,22 @@ class examinationActions extends sfActions
 		}
 
   }
+
+  public function executeGetQuestionTemplate(sfWebRequest $request)
+  {
+  	$temp = $request->getParameter('temp');
+		switch ($temp) {
+			case 'multiple':
+				return $this->renderPartial('examination/multiple');
+				break;
+
+			case 'essay':
+				return $this->renderPartial('examination/essay');
+				break;
+
+			default:
+				# code...
+				break;
+		}
+  }
 }
