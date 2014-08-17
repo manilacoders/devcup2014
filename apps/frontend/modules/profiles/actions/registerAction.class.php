@@ -6,6 +6,12 @@ class registerAction extends sfAction
   {
     $post = $request->getPostParameters();
     if ($request->isMethod(sfRequest::POST)) {
+
+      $profile = ProfileTable::getInstance()->findOneByEmail($post['email']);
+      if ($profile) {
+        throw new Exception("Email address {$post['email']} is already registered.");
+      }
+
       try {
         Doctrine_Manager::connection()->beginTransaction();
        
@@ -36,7 +42,7 @@ class registerAction extends sfAction
   public function sendConfirmation($profile)
   {
     $body = $this->getPartial('emails/confirmation', array(
-      'profile' => $profile
+      'profile' => $profile->toArray()
     ));
     
     $message = $this->getMailer()

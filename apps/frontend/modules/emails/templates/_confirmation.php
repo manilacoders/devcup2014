@@ -1,6 +1,8 @@
 Hi There,
 
-Click here to confirm your account <a href="<?php echo url_for("@confirm?emailToken=$profile{['emailToken']}"); ?>"> Confirm Now</a>
+<p>Click the link below to confirm your account.</p>
+
+Confirmation Link: <?php echo sfConfig::get('app_confirmation_url') .'/'. $profile['email_token']; ?> 
 
 
 Thank you
