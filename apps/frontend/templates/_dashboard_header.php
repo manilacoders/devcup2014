@@ -7,8 +7,8 @@
 		<li <?php if ($current_section == 'student') echo 'class="active"'?>>
       <a href="#">Students</a>
     </li>
-    <li <?php if ($current_section == 'reports') echo 'class="active"'?>>
-			<a href="<?php echo url_for("reports/index") ?>">Reports</a>
+    <li>
+			<a href="<?php echo url_for("tempReports/index") ?>">Reports</a>
 		</li>
 	</ul>
 	<ul class="nav navbar-nav pull-right">
