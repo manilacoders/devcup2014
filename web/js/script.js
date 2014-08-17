@@ -20,7 +20,7 @@ $(function() {
 
 	$('#main-panel').on('click', '#create-new', function(e) {
 		e.preventDefault();
-		console.log('clicked 1');
+		$('.new-exam').find('input').attr('disabled', 'disabled');
 		$('.question').removeClass('hide');
 	});
 
