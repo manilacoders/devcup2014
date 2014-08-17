@@ -20,6 +20,9 @@
 				<label class="sr-only" for="">Subject</label>
 				<select name="subject" class="form-control">
 					<option value="">-- Select Subject --</option>
+					<?php foreach ($subjects as $subject): ?>
+						<option value="<?php echo $subject['id'] ?>"><?php echo $subject['name'] ?></option>
+					<?php endforeach ?>
 				</select>
 			</div>
 

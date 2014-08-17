@@ -14,6 +14,11 @@ class registerAction extends sfAction
 
       try {
         Doctrine_Manager::connection()->beginTransaction();
+
+        // $profile = ProfileTable::getInstance()->findOneByEmail($post['email']);
+        // if ($profile) {
+        //   throw new Exception("Account is already registered.");
+        // }
        
         $profile = new Profile;
         $profile->fromArray($post);
@@ -44,7 +49,7 @@ class registerAction extends sfAction
     $body = $this->getPartial('emails/confirmation', array(
       'profile' => $profile->toArray()
     ));
-    
+
     $message = $this->getMailer()
       ->compose(sfConfig::get('app_email_sender'), $profile->getEmail(), 'GURO Account Confirmation', $body);
     

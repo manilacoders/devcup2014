@@ -10,6 +10,45 @@
  */
 class subjectsActions extends sfActions
 {
+  /**
+   * Executes CreateNew action
+   *
+   * @param sfWebRequest  A request object
+   **/
+  public function executeCreateNew(sfWebRequest $request)
+  {
+    $user = $this->getUser();
+
+    $name = $request->getParameter('subject');
+    if (! $name) {
+      throw new Exception("Subject parameter is required.");
+    }
+
+    try {
+      Doctrine_Manager::connection()->beginTransaction();
+
+      $profile = ProfileTable::getInstance()->findOneById($user->getAttribute('user')->getId());
+
+      $subject = SubjectTable::getInstance()->findOneByProfileIdAndName($profile->getId(), $name);
+      if ($subject) {
+        throw new Exception("Subject already exist.");
+      }
+     
+      $subject = new Subject;
+      $subject
+        ->setName($name)
+        ->setProfile($profile)
+        ->save();
+     
+      Doctrine_Manager::connection()->commit();
+
+    } catch (Exception $e) {
+      Doctrine_Manager::connection()->rollback();
+      throw $e;
+    }
+
+  }
+
  /**
   * Executes index action
   *
