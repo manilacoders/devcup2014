@@ -3,11 +3,12 @@
 <div class="col-lg-12">
 	<form class="form-horizontal" role="form" action="<?php echo url_for('examination/compute') ?>" method='post'>
     <input type="hidden" name="exam_id" value="<?php echo $exam['id'] ?>">
+    <?php $count = 1; ?>
 		<?php foreach ($questions as $question): ?>
     	<div class="panel panel-warning">
   		  <div class="panel-heading">
   				<h3 class="panel-title">
-    			<b>Question:</b> <br>
+    			<b><?php echo $count ?>.) </b>
     			<?php echo $question['question'] ?>
   				</h3>
   		  </div>

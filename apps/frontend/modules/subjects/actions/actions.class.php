@@ -32,7 +32,8 @@ class subjectsActions extends sfActions
 
       $subject = SubjectTable::getInstance()->findOneByProfileIdAndName($profile->getId(), $name);
       if ($subject) {
-        throw new Exception("Subject already exist.");
+        $this->getUser()->setFlash('success', 'Subject already exist.');
+        $this->redirect('@dashboard');
       }
      
       $subject = new Subject;
