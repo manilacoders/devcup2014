@@ -3,6 +3,7 @@ Subject:
   columns: 
     name: string(50)
     profile_id: integer
+    section_id: integer
 
   indexes:
     name: 
@@ -12,6 +13,9 @@ Subject:
     Profile: 
       alias: profile
       foreignAlias: subject
+    Section: 
+      alias: section
+      foreignAlias: subjects
 
   actAs:
     - Timestampable

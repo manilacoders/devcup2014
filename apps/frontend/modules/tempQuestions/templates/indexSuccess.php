@@ -1,14 +1,21 @@
-<a href="<?php echo url_for('temQuestions/create') ?>">Create Exam</a> |
-<a href="<?php echo url_for('temQuestions/edit') ?>">Edit Exam</a> | 
-
+<a class="btn btn-danger btn-sm" href="<?php echo url_for('tempExams/index') ?>">Go Back</a>
+<a class="btn btn-success btn-xsm" href="<?php echo url_for('tempQuestions/create?exam_id='.$exam['id']) ?>">Create Question</a>
 
 <br><br>
-Exam: <?php $exam['name'] ?><br>
+<h5>Exam Name: <?php echo $exam['name'] ?></h5><br>
 
-<br>
-Your Questions Lists:
-<ul>
+<h4>Your Questions Lists:</h4>
+<table class="table">
+  <tr>
+    <th></th>
+    <th>Title</th>
+    <th>Created Date</th>
+  </tr>
   <?php foreach ($lists as $list): ?>
-    <li><?php echo $list['name'] ?>, created_at(<?php echo $list['created_at'] ?>) [<a href="<?php echo url_for('tempQuestions/index?exam_id='.$list['id']) ?>">Create Questions</a>]</li>
+  <tr>
+    <td><a href="<?php echo url_for('tempQuestions/edit?question_id='.$list['id']) ?>">Edit</a></td>
+    <td><?php echo $list['question'] ?></td>
+    <td><?php echo $list['created_at'] ?></td>
+  </tr>
   <?php endforeach ?>
-</ul>
+</table>

@@ -15,6 +15,7 @@ abstract class BaseSubjectFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'name'       => new sfWidgetFormFilterInput(),
       'profile_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('profile'), 'add_empty' => true)),
+      'section_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('section'), 'add_empty' => true)),
       'created_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
@@ -22,6 +23,7 @@ abstract class BaseSubjectFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'name'       => new sfValidatorPass(array('required' => false)),
       'profile_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('profile'), 'column' => 'id')),
+      'section_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('section'), 'column' => 'id')),
       'created_at' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -46,6 +48,7 @@ abstract class BaseSubjectFormFilter extends BaseFormFilterDoctrine
       'id'         => 'Number',
       'name'       => 'Text',
       'profile_id' => 'ForeignKey',
+      'section_id' => 'ForeignKey',
       'created_at' => 'Date',
       'updated_at' => 'Date',
     );

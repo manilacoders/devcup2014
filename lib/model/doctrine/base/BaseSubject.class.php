@@ -7,16 +7,22 @@
  * 
  * @property string $name
  * @property integer $profile_id
+ * @property integer $section_id
  * @property Profile $profile
+ * @property Section $section
  * @property Doctrine_Collection $exams
  * 
  * @method string              getName()       Returns the current record's "name" value
  * @method integer             getProfileId()  Returns the current record's "profile_id" value
+ * @method integer             getSectionId()  Returns the current record's "section_id" value
  * @method Profile             getProfile()    Returns the current record's "profile" value
+ * @method Section             getSection()    Returns the current record's "section" value
  * @method Doctrine_Collection getExams()      Returns the current record's "exams" collection
  * @method Subject             setName()       Sets the current record's "name" value
  * @method Subject             setProfileId()  Sets the current record's "profile_id" value
+ * @method Subject             setSectionId()  Sets the current record's "section_id" value
  * @method Subject             setProfile()    Sets the current record's "profile" value
+ * @method Subject             setSection()    Sets the current record's "section" value
  * @method Subject             setExams()      Sets the current record's "exams" collection
  * 
  * @package    devcup2014
@@ -36,6 +42,9 @@ abstract class BaseSubject extends sfDoctrineRecord
         $this->hasColumn('profile_id', 'integer', null, array(
              'type' => 'integer',
              ));
+        $this->hasColumn('section_id', 'integer', null, array(
+             'type' => 'integer',
+             ));
 
 
         $this->index('name', array(
@@ -51,6 +60,10 @@ abstract class BaseSubject extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Profile as profile', array(
              'local' => 'profile_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('Section as section', array(
+             'local' => 'section_id',
              'foreign' => 'id'));
 
         $this->hasMany('Exam as exams', array(
