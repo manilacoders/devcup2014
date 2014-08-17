@@ -22,14 +22,28 @@ class examinationActions extends sfActions
 
   public function executeGetPage(sfWebRequest $request)
   {
+    $user = $this->getUser();
+
+    $profile = ProfileTable::getInstance()->findOneByEmail($user->getEmail());
+
+    $subjects = $profile->getSubject();
+
     $page = $request->getParameter('page');
 		switch ($page) {
 			case 'new':
-				return $this->renderPartial('examination/new');
+				return $this->renderPartial('examination/new', array(
+          'subjects' => $subjects->toArray(),
+        ));
 				break;
 
 			case 'monitoring':
 				return $this->renderPartial('examination/monitoring');
+				break;
+
+			case 'subject':
+				return $this->renderPartial('examination/subject', array(
+          'subjects' => $subjects->toArray(),
+        ));
 				break;
 
 			case 'manage':
@@ -50,6 +64,7 @@ class examinationActions extends sfActions
   public function executeGetQuestionTemplate(sfWebRequest $request)
   {
   	$temp = $request->getParameter('temp');
+
 		switch ($temp) {
 			case 'multiple':
 				return $this->renderPartial('examination/multiple');

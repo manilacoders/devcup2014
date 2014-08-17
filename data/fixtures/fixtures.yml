@@ -32,7 +32,7 @@ Profile:
     first_name: Kenn  
     middle_name: 
     last_name: Capara
-    email: email@gmail.com
+    email: kncapara@gmail.com
     is_active: true
     password: <?php echo sha1('123qwe')."\n"; ?>
     email_token: lkhwoeubkljvojhwoiendmfnsd

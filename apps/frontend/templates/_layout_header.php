@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top layout" role="navigation">
 	<a class="navbar-brand" href="#">Guró</a>
 	<ul class="nav navbar-nav pull-right">
 		<li class="active">
